@@ -1,0 +1,3445 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  
+  <meta charset="UTF-8"/>
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"/>
+  <link rel="icon" href="/favicon.ico" type="image/x-icon"/>
+  
+  <link rel="stylesheet" href="../_static/_base.css"/>
+  <link rel="stylesheet" href="../_static/_layout.css"/>
+  <link rel="stylesheet" href="../_static/_content.css"/>
+  <link rel="stylesheet" href="../_static/_element.css"/>
+  
+  
+  <script type="text/javascript" src="../_static/toc.js"></script>
+  
+  <title>Software Development Plan - Traceability</title>
+  
+</head>
+
+<body class="traceability-view"><div class="layout" id="layout">
+
+    <aside class="layout_aside-header">
+      <div>Table of Contents</div><a class="index-link" href="../index.html">To Index</a></aside>
+
+    <aside class="layout_aside">
+      
+    <ul class="toc"><li><a href="#Scope">
+              <span class="section-number">1</span>
+              Scope
+            </a><ul><li><a href="#Identification">
+              <span class="section-number">1.1</span>
+              Identification
+            </a></li><li><a href="#System-overview-">
+              <span class="section-number">1.2</span>
+              System overview.
+            </a></li><li><a href="#Document-overview-">
+              <span class="section-number">1.3</span>
+              Document overview.
+            </a></li></ul>
+            </li><li><a href="#Referenced-documents-">
+              <span class="section-number">2</span>
+              Referenced documents.
+            </a></li><li><a href="#Overview-of-required-work-">
+              <span class="section-number">3</span>
+              Overview of required work.
+            </a></li><li><a href="#Plans-for-performing-general-software-development-activities-">
+              <span class="section-number">4</span>
+              Plans for performing general software development activities.
+            </a><ul><li><a href="#Software-development-process-">
+              <span class="section-number">4.1</span>
+              Software development process.
+            </a></li><li><a href="#General-plans-for-software-development-">
+              <span class="section-number">4.2</span>
+              General plans for software development.
+            </a><ul><li><a href="#Software-development-methods-">
+              <span class="section-number">4.2.1</span>
+              Software development methods.
+            </a></li><li><a href="#Standards-for-software-products-">
+              <span class="section-number">4.2.2</span>
+              Standards for software products.
+            </a></li><li><a href="#Reusable-software-products-">
+              <span class="section-number">4.2.3</span>
+              Reusable software products.
+            </a><ul><li><a href="#Incorporating-reusable-software-products-">
+              <span class="section-number">4.2.3.1</span>
+              Incorporating reusable software products.
+            </a></li><li><a href="#Developing-reusable-software-products-">
+              <span class="section-number">4.2.3.2</span>
+              Developing reusable software products.
+            </a></li></ul>
+            </li><li><a href="#Handling-of-critical-requirements-">
+              <span class="section-number">4.2.4</span>
+              Handling of critical requirements.
+            </a><ul><li><a href="#Safety-assurance">
+              <span class="section-number">4.2.4.1</span>
+              Safety assurance
+            </a></li><li><a href="#Security-assurance">
+              <span class="section-number">4.2.4.2</span>
+              Security assurance
+            </a></li><li><a href="#Privacy-assurance">
+              <span class="section-number">4.2.4.3</span>
+              Privacy assurance
+            </a></li><li><a href="#Assurance-of-other-critical-requirements">
+              <span class="section-number">4.2.4.4</span>
+              Assurance of other critical requirements
+            </a></li></ul>
+            </li><li><a href="#Computer-hardware-resource-utilization-">
+              <span class="section-number">4.2.5</span>
+              Computer hardware resource utilization.
+            </a></li><li><a href="#Recording-rationale-">
+              <span class="section-number">4.2.6</span>
+              Recording rationale.
+            </a></li><li><a href="#Access-for-acquirer-review-">
+              <span class="section-number">4.2.7</span>
+              Access for acquirer review.
+            </a></li></ul>
+            </li></ul>
+            </li><li><a href="#Plans-for-performing-detailed-software-development-activities-">
+              <span class="section-number">5</span>
+              Plans for performing detailed software development activities.
+            </a><ul><li><a href="#Project-planning-and-oversight-">
+              <span class="section-number">5.1</span>
+              Project planning and oversight.
+            </a><ul><li><a href="#Software-development-planning-covering-updates-to-this-plan-">
+              <span class="section-number">5.1.1</span>
+              Software development planning (covering updates to this plan)
+            </a></li><li><a href="#CSCI-test-planning">
+              <span class="section-number">5.1.2</span>
+              CSCI test planning
+            </a></li><li><a href="#System-test-planning">
+              <span class="section-number">5.1.3</span>
+              System test planning
+            </a></li><li><a href="#Software-installation-planning">
+              <span class="section-number">5.1.4</span>
+              Software installation planning
+            </a></li><li><a href="#Software-transition-planning">
+              <span class="section-number">5.1.5</span>
+              Software transition planning
+            </a></li><li><a href="#Following-and-updating-plans-including-the-intervals-for-management-review">
+              <span class="section-number">5.1.6</span>
+              Following and updating plans, including the intervals for management review
+            </a></li></ul>
+            </li><li><a href="#Establishing-a-software-development-environment-">
+              <span class="section-number">5.2</span>
+              Establishing a software development environment.
+            </a><ul><li><a href="#Software-engineering-environment">
+              <span class="section-number">5.2.1</span>
+              Software engineering environment
+            </a></li><li><a href="#Software-test-environment">
+              <span class="section-number">5.2.2</span>
+              Software test environment
+            </a></li><li><a href="#Software-development-library">
+              <span class="section-number">5.2.3</span>
+              Software development library
+            </a></li><li><a href="#Software-development-files">
+              <span class="section-number">5.2.4</span>
+              Software development files
+            </a></li><li><a href="#Non-deliverable-software">
+              <span class="section-number">5.2.5</span>
+              Non-deliverable software
+            </a></li></ul>
+            </li><li><a href="#System-requirements-analysis-">
+              <span class="section-number">5.3</span>
+              System requirements analysis.
+            </a><ul><li><a href="#Analysis-of-user-input">
+              <span class="section-number">5.3.1</span>
+              Analysis of user input
+            </a></li><li><a href="#Operational-concept">
+              <span class="section-number">5.3.2</span>
+              Operational concept
+            </a></li><li><a href="#System-requirements">
+              <span class="section-number">5.3.3</span>
+              System requirements
+            </a></li></ul>
+            </li><li><a href="#System-design-">
+              <span class="section-number">5.4</span>
+              System design.
+            </a><ul><li><a href="#System-wide-design-decisions">
+              <span class="section-number">5.4.1</span>
+              System-wide design decisions
+            </a></li><li><a href="#System-architectural-design">
+              <span class="section-number">5.4.2</span>
+              System architectural design
+            </a></li></ul>
+            </li><li><a href="#Software-requirements-analysis-">
+              <span class="section-number">5.5</span>
+              Software requirements analysis.
+            </a></li><li><a href="#Software-design-">
+              <span class="section-number">5.6</span>
+              Software design.
+            </a><ul><li><a href="#CSCI-wide-design-decisions">
+              <span class="section-number">5.6.1</span>
+              CSCI-wide design decisions
+            </a></li><li><a href="#CSCI-architectural-design">
+              <span class="section-number">5.6.2</span>
+              CSCI architectural design
+            </a></li><li><a href="#CSCI-detailed-design">
+              <span class="section-number">5.6.3</span>
+              CSCI detailed design
+            </a></li></ul>
+            </li><li><a href="#Software-implementation-and-unit-testing-">
+              <span class="section-number">5.7</span>
+              Software implementation and unit testing.
+            </a><ul><li><a href="#Software-implementation">
+              <span class="section-number">5.7.1</span>
+              Software implementation
+            </a></li><li><a href="#Preparing-for-unit-testing">
+              <span class="section-number">5.7.2</span>
+              Preparing for unit testing
+            </a></li><li><a href="#Performing-unit-testing">
+              <span class="section-number">5.7.3</span>
+              Performing unit testing
+            </a></li><li><a href="#Revision-and-retesting">
+              <span class="section-number">5.7.4</span>
+              Revision and retesting
+            </a></li><li><a href="#Analyzing-and-recording-unit-test-results">
+              <span class="section-number">5.7.5</span>
+              Analyzing and recording unit test results
+            </a></li></ul>
+            </li><li><a href="#Unit-integration-and-testing-">
+              <span class="section-number">5.8</span>
+              Unit integration and testing.
+            </a><ul><li><a href="#Preparing-for-unit-integration-and-testing">
+              <span class="section-number">5.8.1</span>
+              Preparing for unit integration and testing
+            </a></li><li><a href="#Performing-unit-integration-and-testing">
+              <span class="section-number">5.8.2</span>
+              Performing unit integration and testing
+            </a></li><li><a href="#Revision-and-retesting">
+              <span class="section-number">5.8.3</span>
+              Revision and retesting
+            </a></li><li><a href="#Analyzing-and-recording-unit-integration-and-test-results">
+              <span class="section-number">5.8.4</span>
+              Analyzing and recording unit integration and test results
+            </a></li></ul>
+            </li><li><a href="#CSCI-qualification-testing-">
+              <span class="section-number">5.9</span>
+              CSCI qualification testing.
+            </a><ul><li><a href="#Independence-in-CSCI-qualification-testing">
+              <span class="section-number">5.9.1</span>
+              Independence in CSCI qualification testing
+            </a></li><li><a href="#Testing-on-the-target-computer-system">
+              <span class="section-number">5.9.2</span>
+              Testing on the target computer system
+            </a></li><li><a href="#Preparing-for-CSCI-qualification-testing">
+              <span class="section-number">5.9.3</span>
+              Preparing for CSCI qualification testing
+            </a></li><li><a href="#Dry-run-of-CSCI-qualification-testing">
+              <span class="section-number">5.9.4</span>
+              Dry run of CSCI qualification testing
+            </a></li><li><a href="#Performing-CSCI-qualification-testing">
+              <span class="section-number">5.9.5</span>
+              Performing CSCI qualification testing
+            </a></li><li><a href="#Revision-and-retesting">
+              <span class="section-number">5.9.6</span>
+              Revision and retesting
+            </a></li><li><a href="#Analyzing-and-recording-CSCI-qualification-test-results">
+              <span class="section-number">5.9.7</span>
+              Analyzing and recording CSCI qualification test results
+            </a></li></ul>
+            </li><li><a href="#CSCI-HWCI-integration-and-testing-">
+              <span class="section-number">5.10</span>
+              CSCI/HWCI integration and testing.
+            </a><ul><li><a href="#Preparing-for-CSCI-HWCI-integration-and-testing">
+              <span class="section-number">5.10.1</span>
+              Preparing for CSCI/HWCI integration and testing
+            </a></li><li><a href="#Performing-CSCI-HWCI-integration-and-testing">
+              <span class="section-number">5.10.2</span>
+              Performing CSCI/HWCI integration and testing
+            </a></li><li><a href="#Revision-and-retesting">
+              <span class="section-number">5.10.3</span>
+              Revision and retesting
+            </a></li><li><a href="#Analyzing-and-recording-CSCI-HWCI-integration-and-test-results">
+              <span class="section-number">5.10.4</span>
+              Analyzing and recording CSCI/HWCI integration and test results
+            </a></li></ul>
+            </li><li><a href="#System-qualification-testing-">
+              <span class="section-number">5.11</span>
+              System qualification testing.
+            </a><ul><li><a href="#Independence-in-system-qualification-testing">
+              <span class="section-number">5.11.1</span>
+              Independence in system qualification testing
+            </a></li><li><a href="#Testing-on-the-target-computer-system">
+              <span class="section-number">5.11.2</span>
+              Testing on the target computer system
+            </a></li><li><a href="#Preparing-for-system-qualification-testing">
+              <span class="section-number">5.11.3</span>
+              Preparing for system qualification testing
+            </a></li><li><a href="#Dry-run-of-system-qualification-testing">
+              <span class="section-number">5.11.4</span>
+              Dry run of system qualification testing
+            </a></li><li><a href="#Performing-system-qualification-testing">
+              <span class="section-number">5.11.5</span>
+              Performing system qualification testing
+            </a></li><li><a href="#Revision-and-retesting">
+              <span class="section-number">5.11.6</span>
+              Revision and retesting
+            </a></li><li><a href="#Analyzing-and-recording-system-qualification-test-results">
+              <span class="section-number">5.11.7</span>
+              Analyzing and recording system qualification test results
+            </a></li></ul>
+            </li><li><a href="#Preparing-for-software-use-">
+              <span class="section-number">5.12</span>
+              Preparing for software use.
+            </a><ul><li><a href="#Preparing-the-executable-software">
+              <span class="section-number">5.12.1</span>
+              Preparing the executable software
+            </a></li><li><a href="#Preparing-version-descriptions-for-user-sites">
+              <span class="section-number">5.12.2</span>
+              Preparing version descriptions for user sites
+            </a></li><li><a href="#Preparing-user-manuals">
+              <span class="section-number">5.12.3</span>
+              Preparing user manuals
+            </a></li><li><a href="#Installation-at-user-sites">
+              <span class="section-number">5.12.4</span>
+              Installation at user sites
+            </a></li></ul>
+            </li><li><a href="#Preparing-for-software-transition-">
+              <span class="section-number">5.13</span>
+              Preparing for software transition.
+            </a><ul><li><a href="#Preparing-the-executable-software">
+              <span class="section-number">5.13.1</span>
+              Preparing the executable software
+            </a></li><li><a href="#Preparing-source-files">
+              <span class="section-number">5.13.2</span>
+              Preparing source files
+            </a></li><li><a href="#Preparing-version-descriptions-for-the-support-site">
+              <span class="section-number">5.13.3</span>
+              Preparing version descriptions for the support site
+            </a></li><li><a href="#Preparing-the-as-built-CSCI-design-and-other-software-support-information">
+              <span class="section-number">5.13.4</span>
+              Preparing the "as built" CSCI design and other software support information
+            </a></li><li><a href="#Updating-the-system-design-description">
+              <span class="section-number">5.13.5</span>
+              Updating the system design description
+            </a></li><li><a href="#Preparing-support-manuals">
+              <span class="section-number">5.13.6</span>
+              Preparing support manuals
+            </a></li><li><a href="#Transition-to-the-designated-support-site">
+              <span class="section-number">5.13.7</span>
+              Transition to the designated support site
+            </a></li></ul>
+            </li><li><a href="#Software-configuration-management-">
+              <span class="section-number">5.14</span>
+              Software configuration management.
+            </a><ul><li><a href="#Configuration-identification">
+              <span class="section-number">5.14.1</span>
+              Configuration identification
+            </a></li><li><a href="#Configuration-control">
+              <span class="section-number">5.14.2</span>
+              Configuration control
+            </a></li><li><a href="#Configuration-status-accounting">
+              <span class="section-number">5.14.3</span>
+              Configuration status accounting
+            </a></li><li><a href="#Configuration-audits">
+              <span class="section-number">5.14.4</span>
+              Configuration audits
+            </a></li><li><a href="#Packaging-storage-handling-and-delivery">
+              <span class="section-number">5.14.5</span>
+              Packaging, storage, handling, and delivery
+            </a></li></ul>
+            </li><li><a href="#Software-product-evaluation-">
+              <span class="section-number">5.15</span>
+              Software product evaluation.
+            </a><ul><li><a href="#In-process-and-final-software-product-evaluations">
+              <span class="section-number">5.15.1</span>
+              In-process and final software product evaluations
+            </a></li><li><a href="#Software-product-evaluation-records-including-items-to-be-recorded">
+              <span class="section-number">5.15.2</span>
+              Software product evaluation records, including items to be recorded
+            </a></li><li><a href="#Independence-in-software-product-evaluation">
+              <span class="section-number">5.15.3</span>
+              Independence in software product evaluation
+            </a></li></ul>
+            </li><li><a href="#Software-quality-assurance-">
+              <span class="section-number">5.16</span>
+              Software quality assurance.
+            </a><ul><li><a href="#Software-quality-assurance-evaluations">
+              <span class="section-number">5.16.1</span>
+              Software quality assurance evaluations
+            </a></li><li><a href="#Software-quality-assurance-records-including-items-to-be-recorded">
+              <span class="section-number">5.16.2</span>
+              Software quality assurance records, including items to be recorded
+            </a></li><li><a href="#Independence-in-software-quality-assurance">
+              <span class="section-number">5.16.3</span>
+              Independence in software quality assurance
+            </a></li></ul>
+            </li><li><a href="#Corrective-action-">
+              <span class="section-number">5.17</span>
+              Corrective action.
+            </a><ul><li><a href="#Problem-change-reports-including-items-to-be-recorded-candidate-items-include-project-name-originator-problem-number-problem-name-software-element-or-document-affected-origination-date-category-and-priority-description-analyst-assigned-to-the-problem-date-assigned-date-completed-analysis-time-recommended-solution-impacts-problem-status-approval-of-solution-follow-up-actions-corrector-correction-date-version-where-corrected-correction-time-description-of-solution-implemented-">
+              <span class="section-number">5.17.1</span>
+              Problem/change reports, including items to be recorded (candidate items include project name, originator, problem number, problem name, software element or document affected, origination date, category and priority, description, analyst assigned to the problem, date assigned, date completed, analysis time, recommended solution, impacts, problem status, approval of solution, follow-up actions, corrector, correction date, version where corrected, correction time, description of solution implemented)
+            </a></li><li><a href="#Corrective-action-system">
+              <span class="section-number">5.17.2</span>
+              Corrective action system
+            </a></li></ul>
+            </li><li><a href="#Joint-technical-and-management-reviews-">
+              <span class="section-number">5.18</span>
+              Joint technical and management reviews.
+            </a><ul><li><a href="#Joint-technical-reviews-including-a-proposed-set-of-reviews">
+              <span class="section-number">5.18.1</span>
+              Joint technical reviews, including a proposed set of reviews
+            </a></li><li><a href="#Joint-management-reviews-including-a-proposed-set-of-reviews">
+              <span class="section-number">5.18.2</span>
+              Joint management reviews, including a proposed set of reviews
+            </a></li></ul>
+            </li><li><a href="#Other-software-development-activities-">
+              <span class="section-number">5.19</span>
+              Other software development activities.
+            </a><ul><li><a href="#Risk-management-including-known-risks-and-corresponding-strategies">
+              <span class="section-number">5.19.1</span>
+              Risk management, including known risks and corresponding strategies
+            </a></li><li><a href="#Software-management-indicators-including-indicators-to-be-used">
+              <span class="section-number">5.19.2</span>
+              Software management indicators, including indicators to be used
+            </a></li><li><a href="#Security-and-privacy">
+              <span class="section-number">5.19.3</span>
+              Security and privacy
+            </a></li><li><a href="#Subcontractor-management">
+              <span class="section-number">5.19.4</span>
+              Subcontractor management
+            </a></li><li><a href="#Interface-with-software-independent-verification-and-validation-IV-V-agents">
+              <span class="section-number">5.19.5</span>
+              Interface with software independent verification and validation (IV&V) agents
+            </a></li><li><a href="#Coordination-with-associate-developers">
+              <span class="section-number">5.19.6</span>
+              Coordination with associate developers
+            </a></li><li><a href="#Improvement-of-project-processes">
+              <span class="section-number">5.19.7</span>
+              Improvement of project processes
+            </a></li><li><a href="#Other-activities-not-covered-elsewhere-in-the-plan">
+              <span class="section-number">5.19.8</span>
+              Other activities not covered elsewhere in the plan
+            </a></li></ul>
+            </li></ul>
+            </li><li><a href="#Schedules-and-activity-network-">
+              <span class="section-number">6</span>
+              Schedules and activity network.
+            </a></li><li><a href="#Project-organization-and-resources-">
+              <span class="section-number">7</span>
+              Project organization and resources.
+            </a><ul><li><a href="#Project-organization-">
+              <span class="section-number">7.1</span>
+              Project organization.
+            </a></li><li><a href="#Project-resources-">
+              <span class="section-number">7.2</span>
+              Project resources.
+            </a></li></ul>
+            </li><li><a href="#Notes-">
+              <span class="section-number">8</span>
+              Notes.
+            </a></li><li><a href="#Appendixes-">
+              <span class="section-number">9</span>
+              Appendixes.
+            </a></li></ul>
+    </aside>
+
+    <a class="layout_toggler layout_button" id="layout_toggle"></a><nav class="layout_nav">
+        <a
+        class="layout_nav-btn layout_button btn-document"
+        title="Go to Document view"
+        href="../SDP.sdoc/SDP.html">
+        DOC
+      </a>
+      <a
+        class="layout_nav-btn layout_button btn-table"
+        title="Go to Table view"
+        href="../SDP.sdoc/SDP - TABLE.html">
+        TBL
+      </a>
+      <a
+        class="layout_nav-btn layout_button btn-traceability"
+        title="Go to Traceability view"
+        href="../SDP.sdoc/SDP - TRACE.html">
+        TR
+      </a>
+      <a
+        class="layout_nav-btn layout_button btn-deep-traceability"
+        title="Go to Deep Traceability view"
+        href="../SDP.sdoc/SDP - DEEP-TRACE.html">
+        DTR
+      </a>
+      </nav><header class="layout_header">
+      <p>Software Development Plan <span class="document-view-type">Traceability</span></p>
+    </header>
+
+    <main class="layout_main">
+      
+
+      
+
+      <div class="content">
+        <section class="content_section">
+
+          <div class="content_item" data-role="parents"></div>
+          <div class="content_item" data-role="current"><article class="docsection">
+
+  <header class="docsection-headers">
+    <div data-section='meta'></div>
+    <div data-section='description'></div>
+  </header>
+
+  <section data-section="meta" class="docsection_section"><div data-role='anchor' id="Scope"></div><h1 class="section-title" data-level="1">
+      Scope
+    </h1>
+  </section>
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>This section shall be divided into the following paragraphs.</p>
+</div>
+
+    </div></section>
+</article></div>
+          <div class="content_item" data-role="children"></div>
+        </section>
+        <section class="content_section">
+
+          <div class="content_item" data-role="parents"></div>
+          <div class="content_item" data-role="current"><article class="docsection">
+
+  <header class="docsection-headers">
+    <div data-section='meta'></div>
+    <div data-section='description'></div>
+  </header>
+
+  <section data-section="meta" class="docsection_section"><div data-role='anchor' id="Identification"></div><h2 class="section-title" data-level="1.1">
+      Identification
+    </h2>
+  </section>
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>This paragraph shall contain a full identification of the system and the software to which this document applies, including, as applicable, identification number(s), title(s), abbreviation(s), version number(s), and release number(s).</p>
+</div>
+
+    </div></section>
+</article></div>
+          <div class="content_item" data-role="children"></div>
+        </section>
+        <section class="content_section">
+
+          <div class="content_item" data-role="parents"></div>
+          <div class="content_item" data-role="current"><article class="docsection">
+
+  <header class="docsection-headers">
+    <div data-section='meta'></div>
+    <div data-section='description'></div>
+  </header>
+
+  <section data-section="meta" class="docsection_section"><div data-role='anchor' id="System-overview-"></div><h2 class="section-title" data-level="1.2">
+      System overview.
+    </h2>
+  </section>
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>This paragraph shall briefly state the purpose of the system and the software to which this document applies. It shall describe the general nature of the system and software; summarize the history of system development, operation, and maintenance; identify the project sponsor, acquirer, user, developer, and support agencies; identify current and planned operating sites; and list other relevant documents.</p>
+</div>
+
+    </div></section>
+</article></div>
+          <div class="content_item" data-role="children"></div>
+        </section>
+        <section class="content_section">
+
+          <div class="content_item" data-role="parents"></div>
+          <div class="content_item" data-role="current"><article class="docsection">
+
+  <header class="docsection-headers">
+    <div data-section='meta'></div>
+    <div data-section='description'></div>
+  </header>
+
+  <section data-section="meta" class="docsection_section"><div data-role='anchor' id="Document-overview-"></div><h2 class="section-title" data-level="1.3">
+      Document overview.
+    </h2>
+  </section>
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>This paragraph shall summarize the purpose and contents of this document and shall describe any security or privacy considerations associated with its use.</p>
+</div>
+
+    </div></section>
+</article></div>
+          <div class="content_item" data-role="children"></div>
+        </section>
+        <section class="content_section">
+
+          <div class="content_item" data-role="parents"></div>
+          <div class="content_item" data-role="current"><article class="docsection">
+
+  <header class="docsection-headers">
+    <div data-section='meta'></div>
+    <div data-section='description'></div>
+  </header>
+
+  <section data-section="meta" class="docsection_section"><div data-role='anchor' id="Referenced-documents-"></div><h1 class="section-title" data-level="2">
+      Referenced documents.
+    </h1>
+  </section>
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>This section shall list the number, title, revision, and date of all documents referenced in this manual. This section shall also identify the source for all documents not available through normal Government stocking activities.</p>
+</div>
+
+    </div></section>
+</article></div>
+          <div class="content_item" data-role="children"></div>
+        </section>
+        <section class="content_section">
+
+          <div class="content_item" data-role="parents"></div>
+          <div class="content_item" data-role="current"><article class="docsection">
+
+  <header class="docsection-headers">
+    <div data-section='meta'></div>
+    <div data-section='description'></div>
+  </header>
+
+  <section data-section="meta" class="docsection_section"><div data-role='anchor' id="Overview-of-required-work-"></div><h1 class="section-title" data-level="3">
+      Overview of required work.
+    </h1>
+  </section>
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>This section shall be divided into paragraphs as needed to establish the context for the planning described in later sections. It shall include, as applicable, an overview of:</p>
+<ol class="arabic simple">
+<li>Requirements and constraints on the system and software to be developed</li>
+<li>Requirements and constraints on project documentation</li>
+<li>Position of the project in the system life cycle</li>
+<li>The selected program/acquisition strategy or any requirements or constraints on it</li>
+<li>Requirements and constraints on project schedules and resources</li>
+<li>Other requirements and constraints, such as on project security, privacy, methods, standards, interdependencies in hardware and software development, etc.</li>
+</ol>
+</div>
+
+    </div></section>
+</article></div>
+          <div class="content_item" data-role="children"></div>
+        </section>
+        <section class="content_section">
+
+          <div class="content_item" data-role="parents"></div>
+          <div class="content_item" data-role="current"><article class="docsection">
+
+  <header class="docsection-headers">
+    <div data-section='meta'></div>
+    <div data-section='description'></div>
+  </header>
+
+  <section data-section="meta" class="docsection_section"><div data-role='anchor' id="Plans-for-performing-general-software-development-activities-"></div><h1 class="section-title" data-level="4">
+      Plans for performing general software development activities.
+    </h1>
+  </section>
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>This section shall be divided into the following paragraphs. Provisions corresponding to non-required activities may be satisfied by the words &quot;Not applicable.&quot; If different builds or different software on the project require different planning, these differences shall be noted in the paragraphs. In addition to the content specified below, each paragraph shall identify applicable risks/uncertainties and plans for dealing with them.</p>
+</div>
+
+    </div></section>
+</article></div>
+          <div class="content_item" data-role="children"></div>
+        </section>
+        <section class="content_section">
+
+          <div class="content_item" data-role="parents"></div>
+          <div class="content_item" data-role="current"><article class="docsection">
+
+  <header class="docsection-headers">
+    <div data-section='meta'></div>
+    <div data-section='description'></div>
+  </header>
+
+  <section data-section="meta" class="docsection_section"><div data-role='anchor' id="Software-development-process-"></div><h2 class="section-title" data-level="4.1">
+      Software development process.
+    </h2>
+  </section>
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>This paragraph shall describe the software development process to be used. The planning shall cover all contractual clauses concerning this topic, identifying planned builds, if applicable, their objectives, and the software development activities to be performed in each build.</p>
+</div>
+
+    </div></section>
+</article></div>
+          <div class="content_item" data-role="children"></div>
+        </section>
+        <section class="content_section">
+
+          <div class="content_item" data-role="parents"></div>
+          <div class="content_item" data-role="current"><article class="docsection">
+
+  <header class="docsection-headers">
+    <div data-section='meta'></div>
+    <div data-section='description'></div>
+  </header>
+
+  <section data-section="meta" class="docsection_section"><div data-role='anchor' id="General-plans-for-software-development-"></div><h2 class="section-title" data-level="4.2">
+      General plans for software development.
+    </h2>
+  </section>
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>This paragraph shall be divided into the following subparagraphs.</p>
+</div>
+
+    </div></section>
+</article></div>
+          <div class="content_item" data-role="children"></div>
+        </section>
+        <section class="content_section">
+
+          <div class="content_item" data-role="parents"></div>
+          <div class="content_item" data-role="current"><article class="docsection">
+
+  <header class="docsection-headers">
+    <div data-section='meta'></div>
+    <div data-section='description'></div>
+  </header>
+
+  <section data-section="meta" class="docsection_section"><div data-role='anchor' id="Software-development-methods-"></div><h3 class="section-title" data-level="4.2.1">
+      Software development methods.
+    </h3>
+  </section>
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>This paragraph shall describe or reference the software development methods to be used. Included shall be descriptions of the manual and automated tools and procedures to be used in support of these methods. The methods shall cover all contractual clauses concerning this topic. Reference may be made to other paragraphs in this plan if the methods are better described in context with the activities to which they will be applied.</p>
+</div>
+
+    </div></section>
+</article></div>
+          <div class="content_item" data-role="children"></div>
+        </section>
+        <section class="content_section">
+
+          <div class="content_item" data-role="parents"></div>
+          <div class="content_item" data-role="current"><article class="docsection">
+
+  <header class="docsection-headers">
+    <div data-section='meta'></div>
+    <div data-section='description'></div>
+  </header>
+
+  <section data-section="meta" class="docsection_section"><div data-role='anchor' id="Standards-for-software-products-"></div><h3 class="section-title" data-level="4.2.2">
+      Standards for software products.
+    </h3>
+  </section>
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>This paragraph shall describe or reference the standards to be followed for representing requirements, design, code, test cases, test procedures, and test results. The standards shall cover all contractual clauses concerning this topic. Reference may be made to other paragraphs in this plan if the standards are better described in context with the activities to which they will be applied. Standards for code shall be provided for each programming language to be used. They shall include at a minimum:</p>
+<p>Standards for format (such as indentation, spacing, capitalization, and order of information) Standards for header comments (requiring, for example, name/identifier of the code; version identification; modification history; purpose; requirements and design decisions implemented; notes on the processing (such as algorithms used, assumptions, constraints, limitations, and side effects); and notes on the data (inputs, outputs, variables, data structures, etc.) Standards for other comments (such as required number and content expectations) Naming conventions for variables, parameters, packages, procedures, files, etc. Restrictions, if any, on the use of programming language constructs or features Restrictions, if any, on the complexity of code aggregates</p>
+</div>
+
+    </div></section>
+</article></div>
+          <div class="content_item" data-role="children"></div>
+        </section>
+        <section class="content_section">
+
+          <div class="content_item" data-role="parents"></div>
+          <div class="content_item" data-role="current"><article class="docsection">
+
+  <header class="docsection-headers">
+    <div data-section='meta'></div>
+    <div data-section='description'></div>
+  </header>
+
+  <section data-section="meta" class="docsection_section"><div data-role='anchor' id="Reusable-software-products-"></div><h3 class="section-title" data-level="4.2.3">
+      Reusable software products.
+    </h3>
+  </section>
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>This paragraph shall be divided into the following subparagraphs.</p>
+</div>
+
+    </div></section>
+</article></div>
+          <div class="content_item" data-role="children"></div>
+        </section>
+        <section class="content_section">
+
+          <div class="content_item" data-role="parents"></div>
+          <div class="content_item" data-role="current"><article class="docsection">
+
+  <header class="docsection-headers">
+    <div data-section='meta'></div>
+    <div data-section='description'></div>
+  </header>
+
+  <section data-section="meta" class="docsection_section"><div data-role='anchor' id="Incorporating-reusable-software-products-"></div><h4 class="section-title" data-level="4.2.3.1">
+      Incorporating reusable software products.
+    </h4>
+  </section>
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>This paragraph shall describe the approach to be followed for identifying, evaluating, and incorporating reusable software products, including the scope of the search for such products and the criteria to be used for their evaluation. It shall cover all contractual clauses concerning this topic. Candidate or selected reusable software products known at the time this plan is prepared or updated shall be identified and described, together with benefits, drawbacks, and restrictions, as applicable, associated with their use.</p>
+</div>
+
+    </div></section>
+</article></div>
+          <div class="content_item" data-role="children"></div>
+        </section>
+        <section class="content_section">
+
+          <div class="content_item" data-role="parents"></div>
+          <div class="content_item" data-role="current"><article class="docsection">
+
+  <header class="docsection-headers">
+    <div data-section='meta'></div>
+    <div data-section='description'></div>
+  </header>
+
+  <section data-section="meta" class="docsection_section"><div data-role='anchor' id="Developing-reusable-software-products-"></div><h4 class="section-title" data-level="4.2.3.2">
+      Developing reusable software products.
+    </h4>
+  </section>
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>This paragraph shall describe the approach to be followed for identifying, evaluating, and reporting opportunities for developing reusable software products. It shall cover all contractual clauses concerning this topic.</p>
+</div>
+
+    </div></section>
+</article></div>
+          <div class="content_item" data-role="children"></div>
+        </section>
+        <section class="content_section">
+
+          <div class="content_item" data-role="parents"></div>
+          <div class="content_item" data-role="current"><article class="docsection">
+
+  <header class="docsection-headers">
+    <div data-section='meta'></div>
+    <div data-section='description'></div>
+  </header>
+
+  <section data-section="meta" class="docsection_section"><div data-role='anchor' id="Handling-of-critical-requirements-"></div><h3 class="section-title" data-level="4.2.4">
+      Handling of critical requirements.
+    </h3>
+  </section>
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>This paragraph shall be divided into the following subparagraphs to describe the approach to be followed for handling requirements designated critical. The planning in each subparagraph shall cover all contractual clauses concerning the identified topic.</p>
+</div>
+
+    </div></section>
+</article></div>
+          <div class="content_item" data-role="children"></div>
+        </section>
+        <section class="content_section">
+
+          <div class="content_item" data-role="parents"></div>
+          <div class="content_item" data-role="current"><article class="docsection">
+
+  <header class="docsection-headers">
+    <div data-section='meta'></div>
+    <div data-section='description'></div>
+  </header>
+
+  <section data-section="meta" class="docsection_section"><div data-role='anchor' id="Safety-assurance"></div><h4 class="section-title" data-level="4.2.4.1">
+      Safety assurance
+    </h4>
+  </section>
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>{Placeholder}</p>
+</div>
+
+    </div></section>
+</article></div>
+          <div class="content_item" data-role="children"></div>
+        </section>
+        <section class="content_section">
+
+          <div class="content_item" data-role="parents"></div>
+          <div class="content_item" data-role="current"><article class="docsection">
+
+  <header class="docsection-headers">
+    <div data-section='meta'></div>
+    <div data-section='description'></div>
+  </header>
+
+  <section data-section="meta" class="docsection_section"><div data-role='anchor' id="Security-assurance"></div><h4 class="section-title" data-level="4.2.4.2">
+      Security assurance
+    </h4>
+  </section>
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>{Placeholder}</p>
+</div>
+
+    </div></section>
+</article></div>
+          <div class="content_item" data-role="children"></div>
+        </section>
+        <section class="content_section">
+
+          <div class="content_item" data-role="parents"></div>
+          <div class="content_item" data-role="current"><article class="docsection">
+
+  <header class="docsection-headers">
+    <div data-section='meta'></div>
+    <div data-section='description'></div>
+  </header>
+
+  <section data-section="meta" class="docsection_section"><div data-role='anchor' id="Privacy-assurance"></div><h4 class="section-title" data-level="4.2.4.3">
+      Privacy assurance
+    </h4>
+  </section>
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>{Placeholder}</p>
+</div>
+
+    </div></section>
+</article></div>
+          <div class="content_item" data-role="children"></div>
+        </section>
+        <section class="content_section">
+
+          <div class="content_item" data-role="parents"></div>
+          <div class="content_item" data-role="current"><article class="docsection">
+
+  <header class="docsection-headers">
+    <div data-section='meta'></div>
+    <div data-section='description'></div>
+  </header>
+
+  <section data-section="meta" class="docsection_section"><div data-role='anchor' id="Assurance-of-other-critical-requirements"></div><h4 class="section-title" data-level="4.2.4.4">
+      Assurance of other critical requirements
+    </h4>
+  </section>
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>{Placeholder}</p>
+</div>
+
+    </div></section>
+</article></div>
+          <div class="content_item" data-role="children"></div>
+        </section>
+        <section class="content_section">
+
+          <div class="content_item" data-role="parents"></div>
+          <div class="content_item" data-role="current"><article class="docsection">
+
+  <header class="docsection-headers">
+    <div data-section='meta'></div>
+    <div data-section='description'></div>
+  </header>
+
+  <section data-section="meta" class="docsection_section"><div data-role='anchor' id="Computer-hardware-resource-utilization-"></div><h3 class="section-title" data-level="4.2.5">
+      Computer hardware resource utilization.
+    </h3>
+  </section>
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>This paragraph shall describe the approach to be followed for allocating computer hardware resources and monitoring their utilization. It shall cover all contractual clauses concerning this topic.</p>
+</div>
+
+    </div></section>
+</article></div>
+          <div class="content_item" data-role="children"></div>
+        </section>
+        <section class="content_section">
+
+          <div class="content_item" data-role="parents"></div>
+          <div class="content_item" data-role="current"><article class="docsection">
+
+  <header class="docsection-headers">
+    <div data-section='meta'></div>
+    <div data-section='description'></div>
+  </header>
+
+  <section data-section="meta" class="docsection_section"><div data-role='anchor' id="Recording-rationale-"></div><h3 class="section-title" data-level="4.2.6">
+      Recording rationale.
+    </h3>
+  </section>
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>This paragraph shall describe the approach to be followed for recording rationale that will be useful to the support agency for key decisions made on the project. It shall interpret the term &quot;key decisions&quot; for the project and state where the rationale are to be recorded. It shall cover all contractual clauses concerning this topic.</p>
+</div>
+
+    </div></section>
+</article></div>
+          <div class="content_item" data-role="children"></div>
+        </section>
+        <section class="content_section">
+
+          <div class="content_item" data-role="parents"></div>
+          <div class="content_item" data-role="current"><article class="docsection">
+
+  <header class="docsection-headers">
+    <div data-section='meta'></div>
+    <div data-section='description'></div>
+  </header>
+
+  <section data-section="meta" class="docsection_section"><div data-role='anchor' id="Access-for-acquirer-review-"></div><h3 class="section-title" data-level="4.2.7">
+      Access for acquirer review.
+    </h3>
+  </section>
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>This paragraph shall describe the approach to be followed for providing the acquirer or its authorized representative access to developer and subcontractor facilities for review of software products and activities. It shall cover all contractual clauses concerning this topic.</p>
+</div>
+
+    </div></section>
+</article></div>
+          <div class="content_item" data-role="children"></div>
+        </section>
+        <section class="content_section">
+
+          <div class="content_item" data-role="parents"></div>
+          <div class="content_item" data-role="current"><article class="docsection">
+
+  <header class="docsection-headers">
+    <div data-section='meta'></div>
+    <div data-section='description'></div>
+  </header>
+
+  <section data-section="meta" class="docsection_section"><div data-role='anchor' id="Plans-for-performing-detailed-software-development-activities-"></div><h1 class="section-title" data-level="5">
+      Plans for performing detailed software development activities.
+    </h1>
+  </section>
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>This section shall be divided into the following paragraphs. Provisions corresponding to non-required activities may be satisfied by the words &quot;Not applicable.&quot; If different builds or different software on the project require different planning, these differences shall be noted in the paragraphs. The discussion of each activity shall include the approach (meth-ods/procedures/tools) to be applied to: 1) the analysis or other technical tasks involved, 2) the recording of results, and 3) the preparation of associated deliverables, if applicable. The discussion shall also identify applicable risks/uncertainties and plans for dealing with them. Reference may be made to 4.2.1 if applicable methods are described there.</p>
+</div>
+
+    </div></section>
+</article></div>
+          <div class="content_item" data-role="children"></div>
+        </section>
+        <section class="content_section">
+
+          <div class="content_item" data-role="parents"></div>
+          <div class="content_item" data-role="current"><article class="docsection">
+
+  <header class="docsection-headers">
+    <div data-section='meta'></div>
+    <div data-section='description'></div>
+  </header>
+
+  <section data-section="meta" class="docsection_section"><div data-role='anchor' id="Project-planning-and-oversight-"></div><h2 class="section-title" data-level="5.1">
+      Project planning and oversight.
+    </h2>
+  </section>
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>This paragraph shall be divided into the following subparagraphs to describe the approach to be followed for project planning and oversight. The planning in each subparagraph shall cover all contractual clauses regarding the identified topic.</p>
+</div>
+
+    </div></section>
+</article></div>
+          <div class="content_item" data-role="children"></div>
+        </section>
+        <section class="content_section">
+
+          <div class="content_item" data-role="parents"></div>
+          <div class="content_item" data-role="current"><article class="docsection">
+
+  <header class="docsection-headers">
+    <div data-section='meta'></div>
+    <div data-section='description'></div>
+  </header>
+
+  <section data-section="meta" class="docsection_section"><div data-role='anchor' id="Software-development-planning-covering-updates-to-this-plan-"></div><h3 class="section-title" data-level="5.1.1">
+      Software development planning (covering updates to this plan)
+    </h3>
+  </section>
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>{Placeholder}</p>
+</div>
+
+    </div></section>
+</article></div>
+          <div class="content_item" data-role="children"></div>
+        </section>
+        <section class="content_section">
+
+          <div class="content_item" data-role="parents"></div>
+          <div class="content_item" data-role="current"><article class="docsection">
+
+  <header class="docsection-headers">
+    <div data-section='meta'></div>
+    <div data-section='description'></div>
+  </header>
+
+  <section data-section="meta" class="docsection_section"><div data-role='anchor' id="CSCI-test-planning"></div><h3 class="section-title" data-level="5.1.2">
+      CSCI test planning
+    </h3>
+  </section>
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>{Placeholder}</p>
+</div>
+
+    </div></section>
+</article></div>
+          <div class="content_item" data-role="children"></div>
+        </section>
+        <section class="content_section">
+
+          <div class="content_item" data-role="parents"></div>
+          <div class="content_item" data-role="current"><article class="docsection">
+
+  <header class="docsection-headers">
+    <div data-section='meta'></div>
+    <div data-section='description'></div>
+  </header>
+
+  <section data-section="meta" class="docsection_section"><div data-role='anchor' id="System-test-planning"></div><h3 class="section-title" data-level="5.1.3">
+      System test planning
+    </h3>
+  </section>
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>{Placeholder}</p>
+</div>
+
+    </div></section>
+</article></div>
+          <div class="content_item" data-role="children"></div>
+        </section>
+        <section class="content_section">
+
+          <div class="content_item" data-role="parents"></div>
+          <div class="content_item" data-role="current"><article class="docsection">
+
+  <header class="docsection-headers">
+    <div data-section='meta'></div>
+    <div data-section='description'></div>
+  </header>
+
+  <section data-section="meta" class="docsection_section"><div data-role='anchor' id="Software-installation-planning"></div><h3 class="section-title" data-level="5.1.4">
+      Software installation planning
+    </h3>
+  </section>
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>{Placeholder}</p>
+</div>
+
+    </div></section>
+</article></div>
+          <div class="content_item" data-role="children"></div>
+        </section>
+        <section class="content_section">
+
+          <div class="content_item" data-role="parents"></div>
+          <div class="content_item" data-role="current"><article class="docsection">
+
+  <header class="docsection-headers">
+    <div data-section='meta'></div>
+    <div data-section='description'></div>
+  </header>
+
+  <section data-section="meta" class="docsection_section"><div data-role='anchor' id="Software-transition-planning"></div><h3 class="section-title" data-level="5.1.5">
+      Software transition planning
+    </h3>
+  </section>
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>{Placeholder}</p>
+</div>
+
+    </div></section>
+</article></div>
+          <div class="content_item" data-role="children"></div>
+        </section>
+        <section class="content_section">
+
+          <div class="content_item" data-role="parents"></div>
+          <div class="content_item" data-role="current"><article class="docsection">
+
+  <header class="docsection-headers">
+    <div data-section='meta'></div>
+    <div data-section='description'></div>
+  </header>
+
+  <section data-section="meta" class="docsection_section"><div data-role='anchor' id="Following-and-updating-plans-including-the-intervals-for-management-review"></div><h3 class="section-title" data-level="5.1.6">
+      Following and updating plans, including the intervals for management review
+    </h3>
+  </section>
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>{Placeholder}</p>
+</div>
+
+    </div></section>
+</article></div>
+          <div class="content_item" data-role="children"></div>
+        </section>
+        <section class="content_section">
+
+          <div class="content_item" data-role="parents"></div>
+          <div class="content_item" data-role="current"><article class="docsection">
+
+  <header class="docsection-headers">
+    <div data-section='meta'></div>
+    <div data-section='description'></div>
+  </header>
+
+  <section data-section="meta" class="docsection_section"><div data-role='anchor' id="Establishing-a-software-development-environment-"></div><h2 class="section-title" data-level="5.2">
+      Establishing a software development environment.
+    </h2>
+  </section>
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>This paragraph shall be divided into the following subparagraphs to describe the approach to be followed for establishing, controlling, and maintaining a software development environment. The planning in each subparagraph shall cover all contractual clauses regarding the identified topic.</p>
+</div>
+
+    </div></section>
+</article></div>
+          <div class="content_item" data-role="children"></div>
+        </section>
+        <section class="content_section">
+
+          <div class="content_item" data-role="parents"></div>
+          <div class="content_item" data-role="current"><article class="docsection">
+
+  <header class="docsection-headers">
+    <div data-section='meta'></div>
+    <div data-section='description'></div>
+  </header>
+
+  <section data-section="meta" class="docsection_section"><div data-role='anchor' id="Software-engineering-environment"></div><h3 class="section-title" data-level="5.2.1">
+      Software engineering environment
+    </h3>
+  </section>
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>{Placeholder}</p>
+</div>
+
+    </div></section>
+</article></div>
+          <div class="content_item" data-role="children"></div>
+        </section>
+        <section class="content_section">
+
+          <div class="content_item" data-role="parents"></div>
+          <div class="content_item" data-role="current"><article class="docsection">
+
+  <header class="docsection-headers">
+    <div data-section='meta'></div>
+    <div data-section='description'></div>
+  </header>
+
+  <section data-section="meta" class="docsection_section"><div data-role='anchor' id="Software-test-environment"></div><h3 class="section-title" data-level="5.2.2">
+      Software test environment
+    </h3>
+  </section>
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>{Placeholder}</p>
+</div>
+
+    </div></section>
+</article></div>
+          <div class="content_item" data-role="children"></div>
+        </section>
+        <section class="content_section">
+
+          <div class="content_item" data-role="parents"></div>
+          <div class="content_item" data-role="current"><article class="docsection">
+
+  <header class="docsection-headers">
+    <div data-section='meta'></div>
+    <div data-section='description'></div>
+  </header>
+
+  <section data-section="meta" class="docsection_section"><div data-role='anchor' id="Software-development-library"></div><h3 class="section-title" data-level="5.2.3">
+      Software development library
+    </h3>
+  </section>
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>{Placeholder}</p>
+</div>
+
+    </div></section>
+</article></div>
+          <div class="content_item" data-role="children"></div>
+        </section>
+        <section class="content_section">
+
+          <div class="content_item" data-role="parents"></div>
+          <div class="content_item" data-role="current"><article class="docsection">
+
+  <header class="docsection-headers">
+    <div data-section='meta'></div>
+    <div data-section='description'></div>
+  </header>
+
+  <section data-section="meta" class="docsection_section"><div data-role='anchor' id="Software-development-files"></div><h3 class="section-title" data-level="5.2.4">
+      Software development files
+    </h3>
+  </section>
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>{Placeholder}</p>
+</div>
+
+    </div></section>
+</article></div>
+          <div class="content_item" data-role="children"></div>
+        </section>
+        <section class="content_section">
+
+          <div class="content_item" data-role="parents"></div>
+          <div class="content_item" data-role="current"><article class="docsection">
+
+  <header class="docsection-headers">
+    <div data-section='meta'></div>
+    <div data-section='description'></div>
+  </header>
+
+  <section data-section="meta" class="docsection_section"><div data-role='anchor' id="Non-deliverable-software"></div><h3 class="section-title" data-level="5.2.5">
+      Non-deliverable software
+    </h3>
+  </section>
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>{Placeholder}</p>
+</div>
+
+    </div></section>
+</article></div>
+          <div class="content_item" data-role="children"></div>
+        </section>
+        <section class="content_section">
+
+          <div class="content_item" data-role="parents"></div>
+          <div class="content_item" data-role="current"><article class="docsection">
+
+  <header class="docsection-headers">
+    <div data-section='meta'></div>
+    <div data-section='description'></div>
+  </header>
+
+  <section data-section="meta" class="docsection_section"><div data-role='anchor' id="System-requirements-analysis-"></div><h2 class="section-title" data-level="5.3">
+      System requirements analysis.
+    </h2>
+  </section>
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>This paragraph shall be divided into the following subparagraphs to describe the approach to be followed for participating in system requirements analysis. The planning in each subparagraph shall cover all contractual clauses regarding the identified topic.</p>
+</div>
+
+    </div></section>
+</article></div>
+          <div class="content_item" data-role="children"></div>
+        </section>
+        <section class="content_section">
+
+          <div class="content_item" data-role="parents"></div>
+          <div class="content_item" data-role="current"><article class="docsection">
+
+  <header class="docsection-headers">
+    <div data-section='meta'></div>
+    <div data-section='description'></div>
+  </header>
+
+  <section data-section="meta" class="docsection_section"><div data-role='anchor' id="Analysis-of-user-input"></div><h3 class="section-title" data-level="5.3.1">
+      Analysis of user input
+    </h3>
+  </section>
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>{Placeholder}</p>
+</div>
+
+    </div></section>
+</article></div>
+          <div class="content_item" data-role="children"></div>
+        </section>
+        <section class="content_section">
+
+          <div class="content_item" data-role="parents"></div>
+          <div class="content_item" data-role="current"><article class="docsection">
+
+  <header class="docsection-headers">
+    <div data-section='meta'></div>
+    <div data-section='description'></div>
+  </header>
+
+  <section data-section="meta" class="docsection_section"><div data-role='anchor' id="Operational-concept"></div><h3 class="section-title" data-level="5.3.2">
+      Operational concept
+    </h3>
+  </section>
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>{Placeholder}</p>
+</div>
+
+    </div></section>
+</article></div>
+          <div class="content_item" data-role="children"></div>
+        </section>
+        <section class="content_section">
+
+          <div class="content_item" data-role="parents"></div>
+          <div class="content_item" data-role="current"><article class="docsection">
+
+  <header class="docsection-headers">
+    <div data-section='meta'></div>
+    <div data-section='description'></div>
+  </header>
+
+  <section data-section="meta" class="docsection_section"><div data-role='anchor' id="System-requirements"></div><h3 class="section-title" data-level="5.3.3">
+      System requirements
+    </h3>
+  </section>
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>{Placeholder}</p>
+</div>
+
+    </div></section>
+</article></div>
+          <div class="content_item" data-role="children"></div>
+        </section>
+        <section class="content_section">
+
+          <div class="content_item" data-role="parents"></div>
+          <div class="content_item" data-role="current"><article class="docsection">
+
+  <header class="docsection-headers">
+    <div data-section='meta'></div>
+    <div data-section='description'></div>
+  </header>
+
+  <section data-section="meta" class="docsection_section"><div data-role='anchor' id="System-design-"></div><h2 class="section-title" data-level="5.4">
+      System design.
+    </h2>
+  </section>
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>This paragraph shall be divided into the following subparagraphs to describe the approach to be followed for participating in system design. The planning in each subparagraph shall cover all contractual clauses regarding the identified topic.</p>
+</div>
+
+    </div></section>
+</article></div>
+          <div class="content_item" data-role="children"></div>
+        </section>
+        <section class="content_section">
+
+          <div class="content_item" data-role="parents"></div>
+          <div class="content_item" data-role="current"><article class="docsection">
+
+  <header class="docsection-headers">
+    <div data-section='meta'></div>
+    <div data-section='description'></div>
+  </header>
+
+  <section data-section="meta" class="docsection_section"><div data-role='anchor' id="System-wide-design-decisions"></div><h3 class="section-title" data-level="5.4.1">
+      System-wide design decisions
+    </h3>
+  </section>
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>{Placeholder}</p>
+</div>
+
+    </div></section>
+</article></div>
+          <div class="content_item" data-role="children"></div>
+        </section>
+        <section class="content_section">
+
+          <div class="content_item" data-role="parents"></div>
+          <div class="content_item" data-role="current"><article class="docsection">
+
+  <header class="docsection-headers">
+    <div data-section='meta'></div>
+    <div data-section='description'></div>
+  </header>
+
+  <section data-section="meta" class="docsection_section"><div data-role='anchor' id="System-architectural-design"></div><h3 class="section-title" data-level="5.4.2">
+      System architectural design
+    </h3>
+  </section>
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>{Placeholder}</p>
+</div>
+
+    </div></section>
+</article></div>
+          <div class="content_item" data-role="children"></div>
+        </section>
+        <section class="content_section">
+
+          <div class="content_item" data-role="parents"></div>
+          <div class="content_item" data-role="current"><article class="docsection">
+
+  <header class="docsection-headers">
+    <div data-section='meta'></div>
+    <div data-section='description'></div>
+  </header>
+
+  <section data-section="meta" class="docsection_section"><div data-role='anchor' id="Software-requirements-analysis-"></div><h2 class="section-title" data-level="5.5">
+      Software requirements analysis.
+    </h2>
+  </section>
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>This paragraph shall describe the approach to be followed for software requirements analysis. The approach shall cover all contractual clauses concerning this topic.</p>
+</div>
+
+    </div></section>
+</article></div>
+          <div class="content_item" data-role="children"></div>
+        </section>
+        <section class="content_section">
+
+          <div class="content_item" data-role="parents"></div>
+          <div class="content_item" data-role="current"><article class="docsection">
+
+  <header class="docsection-headers">
+    <div data-section='meta'></div>
+    <div data-section='description'></div>
+  </header>
+
+  <section data-section="meta" class="docsection_section"><div data-role='anchor' id="Software-design-"></div><h2 class="section-title" data-level="5.6">
+      Software design.
+    </h2>
+  </section>
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>This paragraph shall be divided into the following subparagraphs to describe the approach to be followed for software design. The planning in each subparagraph shall cover all contractual clauses regarding the identified topic.</p>
+</div>
+
+    </div></section>
+</article></div>
+          <div class="content_item" data-role="children"></div>
+        </section>
+        <section class="content_section">
+
+          <div class="content_item" data-role="parents"></div>
+          <div class="content_item" data-role="current"><article class="docsection">
+
+  <header class="docsection-headers">
+    <div data-section='meta'></div>
+    <div data-section='description'></div>
+  </header>
+
+  <section data-section="meta" class="docsection_section"><div data-role='anchor' id="CSCI-wide-design-decisions"></div><h3 class="section-title" data-level="5.6.1">
+      CSCI-wide design decisions
+    </h3>
+  </section>
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>{Placeholder}</p>
+</div>
+
+    </div></section>
+</article></div>
+          <div class="content_item" data-role="children"></div>
+        </section>
+        <section class="content_section">
+
+          <div class="content_item" data-role="parents"></div>
+          <div class="content_item" data-role="current"><article class="docsection">
+
+  <header class="docsection-headers">
+    <div data-section='meta'></div>
+    <div data-section='description'></div>
+  </header>
+
+  <section data-section="meta" class="docsection_section"><div data-role='anchor' id="CSCI-architectural-design"></div><h3 class="section-title" data-level="5.6.2">
+      CSCI architectural design
+    </h3>
+  </section>
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>{Placeholder}</p>
+</div>
+
+    </div></section>
+</article></div>
+          <div class="content_item" data-role="children"></div>
+        </section>
+        <section class="content_section">
+
+          <div class="content_item" data-role="parents"></div>
+          <div class="content_item" data-role="current"><article class="docsection">
+
+  <header class="docsection-headers">
+    <div data-section='meta'></div>
+    <div data-section='description'></div>
+  </header>
+
+  <section data-section="meta" class="docsection_section"><div data-role='anchor' id="CSCI-detailed-design"></div><h3 class="section-title" data-level="5.6.3">
+      CSCI detailed design
+    </h3>
+  </section>
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>{Placeholder}</p>
+</div>
+
+    </div></section>
+</article></div>
+          <div class="content_item" data-role="children"></div>
+        </section>
+        <section class="content_section">
+
+          <div class="content_item" data-role="parents"></div>
+          <div class="content_item" data-role="current"><article class="docsection">
+
+  <header class="docsection-headers">
+    <div data-section='meta'></div>
+    <div data-section='description'></div>
+  </header>
+
+  <section data-section="meta" class="docsection_section"><div data-role='anchor' id="Software-implementation-and-unit-testing-"></div><h2 class="section-title" data-level="5.7">
+      Software implementation and unit testing.
+    </h2>
+  </section>
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>This paragraph shall be divided into the following subparagraphs to describe the approach to be followed for software implementation and unit testing. The planning in each subparagraph shall cover all contractual clauses regarding the identified topic.</p>
+</div>
+
+    </div></section>
+</article></div>
+          <div class="content_item" data-role="children"></div>
+        </section>
+        <section class="content_section">
+
+          <div class="content_item" data-role="parents"></div>
+          <div class="content_item" data-role="current"><article class="docsection">
+
+  <header class="docsection-headers">
+    <div data-section='meta'></div>
+    <div data-section='description'></div>
+  </header>
+
+  <section data-section="meta" class="docsection_section"><div data-role='anchor' id="Software-implementation"></div><h3 class="section-title" data-level="5.7.1">
+      Software implementation
+    </h3>
+  </section>
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>{Placeholder}</p>
+</div>
+
+    </div></section>
+</article></div>
+          <div class="content_item" data-role="children"></div>
+        </section>
+        <section class="content_section">
+
+          <div class="content_item" data-role="parents"></div>
+          <div class="content_item" data-role="current"><article class="docsection">
+
+  <header class="docsection-headers">
+    <div data-section='meta'></div>
+    <div data-section='description'></div>
+  </header>
+
+  <section data-section="meta" class="docsection_section"><div data-role='anchor' id="Preparing-for-unit-testing"></div><h3 class="section-title" data-level="5.7.2">
+      Preparing for unit testing
+    </h3>
+  </section>
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>{Placeholder}</p>
+</div>
+
+    </div></section>
+</article></div>
+          <div class="content_item" data-role="children"></div>
+        </section>
+        <section class="content_section">
+
+          <div class="content_item" data-role="parents"></div>
+          <div class="content_item" data-role="current"><article class="docsection">
+
+  <header class="docsection-headers">
+    <div data-section='meta'></div>
+    <div data-section='description'></div>
+  </header>
+
+  <section data-section="meta" class="docsection_section"><div data-role='anchor' id="Performing-unit-testing"></div><h3 class="section-title" data-level="5.7.3">
+      Performing unit testing
+    </h3>
+  </section>
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>{Placeholder}</p>
+</div>
+
+    </div></section>
+</article></div>
+          <div class="content_item" data-role="children"></div>
+        </section>
+        <section class="content_section">
+
+          <div class="content_item" data-role="parents"></div>
+          <div class="content_item" data-role="current"><article class="docsection">
+
+  <header class="docsection-headers">
+    <div data-section='meta'></div>
+    <div data-section='description'></div>
+  </header>
+
+  <section data-section="meta" class="docsection_section"><div data-role='anchor' id="Revision-and-retesting"></div><h3 class="section-title" data-level="5.7.4">
+      Revision and retesting
+    </h3>
+  </section>
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>{Placeholder}</p>
+</div>
+
+    </div></section>
+</article></div>
+          <div class="content_item" data-role="children"></div>
+        </section>
+        <section class="content_section">
+
+          <div class="content_item" data-role="parents"></div>
+          <div class="content_item" data-role="current"><article class="docsection">
+
+  <header class="docsection-headers">
+    <div data-section='meta'></div>
+    <div data-section='description'></div>
+  </header>
+
+  <section data-section="meta" class="docsection_section"><div data-role='anchor' id="Analyzing-and-recording-unit-test-results"></div><h3 class="section-title" data-level="5.7.5">
+      Analyzing and recording unit test results
+    </h3>
+  </section>
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>{Placeholder}</p>
+</div>
+
+    </div></section>
+</article></div>
+          <div class="content_item" data-role="children"></div>
+        </section>
+        <section class="content_section">
+
+          <div class="content_item" data-role="parents"></div>
+          <div class="content_item" data-role="current"><article class="docsection">
+
+  <header class="docsection-headers">
+    <div data-section='meta'></div>
+    <div data-section='description'></div>
+  </header>
+
+  <section data-section="meta" class="docsection_section"><div data-role='anchor' id="Unit-integration-and-testing-"></div><h2 class="section-title" data-level="5.8">
+      Unit integration and testing.
+    </h2>
+  </section>
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>This paragraph shall be divided into the following subparagraphs to describe the approach to be followed for unit integration and testing. The planning in each subparagraph shall cover all contractual clauses regarding the identified topic.</p>
+</div>
+
+    </div></section>
+</article></div>
+          <div class="content_item" data-role="children"></div>
+        </section>
+        <section class="content_section">
+
+          <div class="content_item" data-role="parents"></div>
+          <div class="content_item" data-role="current"><article class="docsection">
+
+  <header class="docsection-headers">
+    <div data-section='meta'></div>
+    <div data-section='description'></div>
+  </header>
+
+  <section data-section="meta" class="docsection_section"><div data-role='anchor' id="Preparing-for-unit-integration-and-testing"></div><h3 class="section-title" data-level="5.8.1">
+      Preparing for unit integration and testing
+    </h3>
+  </section>
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>{Placeholder}</p>
+</div>
+
+    </div></section>
+</article></div>
+          <div class="content_item" data-role="children"></div>
+        </section>
+        <section class="content_section">
+
+          <div class="content_item" data-role="parents"></div>
+          <div class="content_item" data-role="current"><article class="docsection">
+
+  <header class="docsection-headers">
+    <div data-section='meta'></div>
+    <div data-section='description'></div>
+  </header>
+
+  <section data-section="meta" class="docsection_section"><div data-role='anchor' id="Performing-unit-integration-and-testing"></div><h3 class="section-title" data-level="5.8.2">
+      Performing unit integration and testing
+    </h3>
+  </section>
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>{Placeholder}</p>
+</div>
+
+    </div></section>
+</article></div>
+          <div class="content_item" data-role="children"></div>
+        </section>
+        <section class="content_section">
+
+          <div class="content_item" data-role="parents"></div>
+          <div class="content_item" data-role="current"><article class="docsection">
+
+  <header class="docsection-headers">
+    <div data-section='meta'></div>
+    <div data-section='description'></div>
+  </header>
+
+  <section data-section="meta" class="docsection_section"><div data-role='anchor' id="Revision-and-retesting"></div><h3 class="section-title" data-level="5.8.3">
+      Revision and retesting
+    </h3>
+  </section>
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>{Placeholder}</p>
+</div>
+
+    </div></section>
+</article></div>
+          <div class="content_item" data-role="children"></div>
+        </section>
+        <section class="content_section">
+
+          <div class="content_item" data-role="parents"></div>
+          <div class="content_item" data-role="current"><article class="docsection">
+
+  <header class="docsection-headers">
+    <div data-section='meta'></div>
+    <div data-section='description'></div>
+  </header>
+
+  <section data-section="meta" class="docsection_section"><div data-role='anchor' id="Analyzing-and-recording-unit-integration-and-test-results"></div><h3 class="section-title" data-level="5.8.4">
+      Analyzing and recording unit integration and test results
+    </h3>
+  </section>
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>{Placeholder}</p>
+</div>
+
+    </div></section>
+</article></div>
+          <div class="content_item" data-role="children"></div>
+        </section>
+        <section class="content_section">
+
+          <div class="content_item" data-role="parents"></div>
+          <div class="content_item" data-role="current"><article class="docsection">
+
+  <header class="docsection-headers">
+    <div data-section='meta'></div>
+    <div data-section='description'></div>
+  </header>
+
+  <section data-section="meta" class="docsection_section"><div data-role='anchor' id="CSCI-qualification-testing-"></div><h2 class="section-title" data-level="5.9">
+      CSCI qualification testing.
+    </h2>
+  </section>
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>This paragraph shall be divided into the following subparagraphs to describe the approach to be followed for CSCI qualification testing. The planning in each subparagraph shall cover all contractual clauses regarding the identified topic.</p>
+</div>
+
+    </div></section>
+</article></div>
+          <div class="content_item" data-role="children"></div>
+        </section>
+        <section class="content_section">
+
+          <div class="content_item" data-role="parents"></div>
+          <div class="content_item" data-role="current"><article class="docsection">
+
+  <header class="docsection-headers">
+    <div data-section='meta'></div>
+    <div data-section='description'></div>
+  </header>
+
+  <section data-section="meta" class="docsection_section"><div data-role='anchor' id="Independence-in-CSCI-qualification-testing"></div><h3 class="section-title" data-level="5.9.1">
+      Independence in CSCI qualification testing
+    </h3>
+  </section>
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>{Placeholder}</p>
+</div>
+
+    </div></section>
+</article></div>
+          <div class="content_item" data-role="children"></div>
+        </section>
+        <section class="content_section">
+
+          <div class="content_item" data-role="parents"></div>
+          <div class="content_item" data-role="current"><article class="docsection">
+
+  <header class="docsection-headers">
+    <div data-section='meta'></div>
+    <div data-section='description'></div>
+  </header>
+
+  <section data-section="meta" class="docsection_section"><div data-role='anchor' id="Testing-on-the-target-computer-system"></div><h3 class="section-title" data-level="5.9.2">
+      Testing on the target computer system
+    </h3>
+  </section>
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>{Placeholder}</p>
+</div>
+
+    </div></section>
+</article></div>
+          <div class="content_item" data-role="children"></div>
+        </section>
+        <section class="content_section">
+
+          <div class="content_item" data-role="parents"></div>
+          <div class="content_item" data-role="current"><article class="docsection">
+
+  <header class="docsection-headers">
+    <div data-section='meta'></div>
+    <div data-section='description'></div>
+  </header>
+
+  <section data-section="meta" class="docsection_section"><div data-role='anchor' id="Preparing-for-CSCI-qualification-testing"></div><h3 class="section-title" data-level="5.9.3">
+      Preparing for CSCI qualification testing
+    </h3>
+  </section>
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>{Placeholder}</p>
+</div>
+
+    </div></section>
+</article></div>
+          <div class="content_item" data-role="children"></div>
+        </section>
+        <section class="content_section">
+
+          <div class="content_item" data-role="parents"></div>
+          <div class="content_item" data-role="current"><article class="docsection">
+
+  <header class="docsection-headers">
+    <div data-section='meta'></div>
+    <div data-section='description'></div>
+  </header>
+
+  <section data-section="meta" class="docsection_section"><div data-role='anchor' id="Dry-run-of-CSCI-qualification-testing"></div><h3 class="section-title" data-level="5.9.4">
+      Dry run of CSCI qualification testing
+    </h3>
+  </section>
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>{Placeholder}</p>
+</div>
+
+    </div></section>
+</article></div>
+          <div class="content_item" data-role="children"></div>
+        </section>
+        <section class="content_section">
+
+          <div class="content_item" data-role="parents"></div>
+          <div class="content_item" data-role="current"><article class="docsection">
+
+  <header class="docsection-headers">
+    <div data-section='meta'></div>
+    <div data-section='description'></div>
+  </header>
+
+  <section data-section="meta" class="docsection_section"><div data-role='anchor' id="Performing-CSCI-qualification-testing"></div><h3 class="section-title" data-level="5.9.5">
+      Performing CSCI qualification testing
+    </h3>
+  </section>
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>{Placeholder}</p>
+</div>
+
+    </div></section>
+</article></div>
+          <div class="content_item" data-role="children"></div>
+        </section>
+        <section class="content_section">
+
+          <div class="content_item" data-role="parents"></div>
+          <div class="content_item" data-role="current"><article class="docsection">
+
+  <header class="docsection-headers">
+    <div data-section='meta'></div>
+    <div data-section='description'></div>
+  </header>
+
+  <section data-section="meta" class="docsection_section"><div data-role='anchor' id="Revision-and-retesting"></div><h3 class="section-title" data-level="5.9.6">
+      Revision and retesting
+    </h3>
+  </section>
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>{Placeholder}</p>
+</div>
+
+    </div></section>
+</article></div>
+          <div class="content_item" data-role="children"></div>
+        </section>
+        <section class="content_section">
+
+          <div class="content_item" data-role="parents"></div>
+          <div class="content_item" data-role="current"><article class="docsection">
+
+  <header class="docsection-headers">
+    <div data-section='meta'></div>
+    <div data-section='description'></div>
+  </header>
+
+  <section data-section="meta" class="docsection_section"><div data-role='anchor' id="Analyzing-and-recording-CSCI-qualification-test-results"></div><h3 class="section-title" data-level="5.9.7">
+      Analyzing and recording CSCI qualification test results
+    </h3>
+  </section>
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>{Placeholder}</p>
+</div>
+
+    </div></section>
+</article></div>
+          <div class="content_item" data-role="children"></div>
+        </section>
+        <section class="content_section">
+
+          <div class="content_item" data-role="parents"></div>
+          <div class="content_item" data-role="current"><article class="docsection">
+
+  <header class="docsection-headers">
+    <div data-section='meta'></div>
+    <div data-section='description'></div>
+  </header>
+
+  <section data-section="meta" class="docsection_section"><div data-role='anchor' id="CSCI-HWCI-integration-and-testing-"></div><h2 class="section-title" data-level="5.10">
+      CSCI/HWCI integration and testing.
+    </h2>
+  </section>
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>This paragraph shall be divided into the following subparagraphs to describe the approach to be followed for participating in CSCI/HWCI integration and testing. The planning in each subparagraph shall cover all contractual clauses regarding the identified topic.</p>
+</div>
+
+    </div></section>
+</article></div>
+          <div class="content_item" data-role="children"></div>
+        </section>
+        <section class="content_section">
+
+          <div class="content_item" data-role="parents"></div>
+          <div class="content_item" data-role="current"><article class="docsection">
+
+  <header class="docsection-headers">
+    <div data-section='meta'></div>
+    <div data-section='description'></div>
+  </header>
+
+  <section data-section="meta" class="docsection_section"><div data-role='anchor' id="Preparing-for-CSCI-HWCI-integration-and-testing"></div><h3 class="section-title" data-level="5.10.1">
+      Preparing for CSCI/HWCI integration and testing
+    </h3>
+  </section>
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>{Placeholder}</p>
+</div>
+
+    </div></section>
+</article></div>
+          <div class="content_item" data-role="children"></div>
+        </section>
+        <section class="content_section">
+
+          <div class="content_item" data-role="parents"></div>
+          <div class="content_item" data-role="current"><article class="docsection">
+
+  <header class="docsection-headers">
+    <div data-section='meta'></div>
+    <div data-section='description'></div>
+  </header>
+
+  <section data-section="meta" class="docsection_section"><div data-role='anchor' id="Performing-CSCI-HWCI-integration-and-testing"></div><h3 class="section-title" data-level="5.10.2">
+      Performing CSCI/HWCI integration and testing
+    </h3>
+  </section>
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>{Placeholder}</p>
+</div>
+
+    </div></section>
+</article></div>
+          <div class="content_item" data-role="children"></div>
+        </section>
+        <section class="content_section">
+
+          <div class="content_item" data-role="parents"></div>
+          <div class="content_item" data-role="current"><article class="docsection">
+
+  <header class="docsection-headers">
+    <div data-section='meta'></div>
+    <div data-section='description'></div>
+  </header>
+
+  <section data-section="meta" class="docsection_section"><div data-role='anchor' id="Revision-and-retesting"></div><h3 class="section-title" data-level="5.10.3">
+      Revision and retesting
+    </h3>
+  </section>
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>{Placeholder}</p>
+</div>
+
+    </div></section>
+</article></div>
+          <div class="content_item" data-role="children"></div>
+        </section>
+        <section class="content_section">
+
+          <div class="content_item" data-role="parents"></div>
+          <div class="content_item" data-role="current"><article class="docsection">
+
+  <header class="docsection-headers">
+    <div data-section='meta'></div>
+    <div data-section='description'></div>
+  </header>
+
+  <section data-section="meta" class="docsection_section"><div data-role='anchor' id="Analyzing-and-recording-CSCI-HWCI-integration-and-test-results"></div><h3 class="section-title" data-level="5.10.4">
+      Analyzing and recording CSCI/HWCI integration and test results
+    </h3>
+  </section>
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>{Placeholder}</p>
+</div>
+
+    </div></section>
+</article></div>
+          <div class="content_item" data-role="children"></div>
+        </section>
+        <section class="content_section">
+
+          <div class="content_item" data-role="parents"></div>
+          <div class="content_item" data-role="current"><article class="docsection">
+
+  <header class="docsection-headers">
+    <div data-section='meta'></div>
+    <div data-section='description'></div>
+  </header>
+
+  <section data-section="meta" class="docsection_section"><div data-role='anchor' id="System-qualification-testing-"></div><h2 class="section-title" data-level="5.11">
+      System qualification testing.
+    </h2>
+  </section>
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>This paragraph shall be divided into the following subparagraphs to describe the approach to be followed for participating in system qualification testing. The planning in each subparagraph shall cover all contractual clauses regarding the identified topic.</p>
+</div>
+
+    </div></section>
+</article></div>
+          <div class="content_item" data-role="children"></div>
+        </section>
+        <section class="content_section">
+
+          <div class="content_item" data-role="parents"></div>
+          <div class="content_item" data-role="current"><article class="docsection">
+
+  <header class="docsection-headers">
+    <div data-section='meta'></div>
+    <div data-section='description'></div>
+  </header>
+
+  <section data-section="meta" class="docsection_section"><div data-role='anchor' id="Independence-in-system-qualification-testing"></div><h3 class="section-title" data-level="5.11.1">
+      Independence in system qualification testing
+    </h3>
+  </section>
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>{Placeholder}</p>
+</div>
+
+    </div></section>
+</article></div>
+          <div class="content_item" data-role="children"></div>
+        </section>
+        <section class="content_section">
+
+          <div class="content_item" data-role="parents"></div>
+          <div class="content_item" data-role="current"><article class="docsection">
+
+  <header class="docsection-headers">
+    <div data-section='meta'></div>
+    <div data-section='description'></div>
+  </header>
+
+  <section data-section="meta" class="docsection_section"><div data-role='anchor' id="Testing-on-the-target-computer-system"></div><h3 class="section-title" data-level="5.11.2">
+      Testing on the target computer system
+    </h3>
+  </section>
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>{Placeholder}</p>
+</div>
+
+    </div></section>
+</article></div>
+          <div class="content_item" data-role="children"></div>
+        </section>
+        <section class="content_section">
+
+          <div class="content_item" data-role="parents"></div>
+          <div class="content_item" data-role="current"><article class="docsection">
+
+  <header class="docsection-headers">
+    <div data-section='meta'></div>
+    <div data-section='description'></div>
+  </header>
+
+  <section data-section="meta" class="docsection_section"><div data-role='anchor' id="Preparing-for-system-qualification-testing"></div><h3 class="section-title" data-level="5.11.3">
+      Preparing for system qualification testing
+    </h3>
+  </section>
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>{Placeholder}</p>
+</div>
+
+    </div></section>
+</article></div>
+          <div class="content_item" data-role="children"></div>
+        </section>
+        <section class="content_section">
+
+          <div class="content_item" data-role="parents"></div>
+          <div class="content_item" data-role="current"><article class="docsection">
+
+  <header class="docsection-headers">
+    <div data-section='meta'></div>
+    <div data-section='description'></div>
+  </header>
+
+  <section data-section="meta" class="docsection_section"><div data-role='anchor' id="Dry-run-of-system-qualification-testing"></div><h3 class="section-title" data-level="5.11.4">
+      Dry run of system qualification testing
+    </h3>
+  </section>
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>{Placeholder}</p>
+</div>
+
+    </div></section>
+</article></div>
+          <div class="content_item" data-role="children"></div>
+        </section>
+        <section class="content_section">
+
+          <div class="content_item" data-role="parents"></div>
+          <div class="content_item" data-role="current"><article class="docsection">
+
+  <header class="docsection-headers">
+    <div data-section='meta'></div>
+    <div data-section='description'></div>
+  </header>
+
+  <section data-section="meta" class="docsection_section"><div data-role='anchor' id="Performing-system-qualification-testing"></div><h3 class="section-title" data-level="5.11.5">
+      Performing system qualification testing
+    </h3>
+  </section>
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>{Placeholder}</p>
+</div>
+
+    </div></section>
+</article></div>
+          <div class="content_item" data-role="children"></div>
+        </section>
+        <section class="content_section">
+
+          <div class="content_item" data-role="parents"></div>
+          <div class="content_item" data-role="current"><article class="docsection">
+
+  <header class="docsection-headers">
+    <div data-section='meta'></div>
+    <div data-section='description'></div>
+  </header>
+
+  <section data-section="meta" class="docsection_section"><div data-role='anchor' id="Revision-and-retesting"></div><h3 class="section-title" data-level="5.11.6">
+      Revision and retesting
+    </h3>
+  </section>
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>{Placeholder}</p>
+</div>
+
+    </div></section>
+</article></div>
+          <div class="content_item" data-role="children"></div>
+        </section>
+        <section class="content_section">
+
+          <div class="content_item" data-role="parents"></div>
+          <div class="content_item" data-role="current"><article class="docsection">
+
+  <header class="docsection-headers">
+    <div data-section='meta'></div>
+    <div data-section='description'></div>
+  </header>
+
+  <section data-section="meta" class="docsection_section"><div data-role='anchor' id="Analyzing-and-recording-system-qualification-test-results"></div><h3 class="section-title" data-level="5.11.7">
+      Analyzing and recording system qualification test results
+    </h3>
+  </section>
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>{Placeholder}</p>
+</div>
+
+    </div></section>
+</article></div>
+          <div class="content_item" data-role="children"></div>
+        </section>
+        <section class="content_section">
+
+          <div class="content_item" data-role="parents"></div>
+          <div class="content_item" data-role="current"><article class="docsection">
+
+  <header class="docsection-headers">
+    <div data-section='meta'></div>
+    <div data-section='description'></div>
+  </header>
+
+  <section data-section="meta" class="docsection_section"><div data-role='anchor' id="Preparing-for-software-use-"></div><h2 class="section-title" data-level="5.12">
+      Preparing for software use.
+    </h2>
+  </section>
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>This paragraph shall be divided into the following subparagraphs to describe the approach to be followed for preparing for software use. The planning in each subparagraph shall cover all contractual clauses regarding the identified topic.</p>
+</div>
+
+    </div></section>
+</article></div>
+          <div class="content_item" data-role="children"></div>
+        </section>
+        <section class="content_section">
+
+          <div class="content_item" data-role="parents"></div>
+          <div class="content_item" data-role="current"><article class="docsection">
+
+  <header class="docsection-headers">
+    <div data-section='meta'></div>
+    <div data-section='description'></div>
+  </header>
+
+  <section data-section="meta" class="docsection_section"><div data-role='anchor' id="Preparing-the-executable-software"></div><h3 class="section-title" data-level="5.12.1">
+      Preparing the executable software
+    </h3>
+  </section>
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>{Placeholder}</p>
+</div>
+
+    </div></section>
+</article></div>
+          <div class="content_item" data-role="children"></div>
+        </section>
+        <section class="content_section">
+
+          <div class="content_item" data-role="parents"></div>
+          <div class="content_item" data-role="current"><article class="docsection">
+
+  <header class="docsection-headers">
+    <div data-section='meta'></div>
+    <div data-section='description'></div>
+  </header>
+
+  <section data-section="meta" class="docsection_section"><div data-role='anchor' id="Preparing-version-descriptions-for-user-sites"></div><h3 class="section-title" data-level="5.12.2">
+      Preparing version descriptions for user sites
+    </h3>
+  </section>
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>{Placeholder}</p>
+</div>
+
+    </div></section>
+</article></div>
+          <div class="content_item" data-role="children"></div>
+        </section>
+        <section class="content_section">
+
+          <div class="content_item" data-role="parents"></div>
+          <div class="content_item" data-role="current"><article class="docsection">
+
+  <header class="docsection-headers">
+    <div data-section='meta'></div>
+    <div data-section='description'></div>
+  </header>
+
+  <section data-section="meta" class="docsection_section"><div data-role='anchor' id="Preparing-user-manuals"></div><h3 class="section-title" data-level="5.12.3">
+      Preparing user manuals
+    </h3>
+  </section>
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>{Placeholder}</p>
+</div>
+
+    </div></section>
+</article></div>
+          <div class="content_item" data-role="children"></div>
+        </section>
+        <section class="content_section">
+
+          <div class="content_item" data-role="parents"></div>
+          <div class="content_item" data-role="current"><article class="docsection">
+
+  <header class="docsection-headers">
+    <div data-section='meta'></div>
+    <div data-section='description'></div>
+  </header>
+
+  <section data-section="meta" class="docsection_section"><div data-role='anchor' id="Installation-at-user-sites"></div><h3 class="section-title" data-level="5.12.4">
+      Installation at user sites
+    </h3>
+  </section>
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>{Placeholder}</p>
+</div>
+
+    </div></section>
+</article></div>
+          <div class="content_item" data-role="children"></div>
+        </section>
+        <section class="content_section">
+
+          <div class="content_item" data-role="parents"></div>
+          <div class="content_item" data-role="current"><article class="docsection">
+
+  <header class="docsection-headers">
+    <div data-section='meta'></div>
+    <div data-section='description'></div>
+  </header>
+
+  <section data-section="meta" class="docsection_section"><div data-role='anchor' id="Preparing-for-software-transition-"></div><h2 class="section-title" data-level="5.13">
+      Preparing for software transition.
+    </h2>
+  </section>
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>This paragraph shall be divided into the following subparagraphs to describe the approach to be followed for preparing for software transition. The planning in each subparagraph shall cover all contractual clauses regarding the identified topic.</p>
+</div>
+
+    </div></section>
+</article></div>
+          <div class="content_item" data-role="children"></div>
+        </section>
+        <section class="content_section">
+
+          <div class="content_item" data-role="parents"></div>
+          <div class="content_item" data-role="current"><article class="docsection">
+
+  <header class="docsection-headers">
+    <div data-section='meta'></div>
+    <div data-section='description'></div>
+  </header>
+
+  <section data-section="meta" class="docsection_section"><div data-role='anchor' id="Preparing-the-executable-software"></div><h3 class="section-title" data-level="5.13.1">
+      Preparing the executable software
+    </h3>
+  </section>
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>{Placeholder}</p>
+</div>
+
+    </div></section>
+</article></div>
+          <div class="content_item" data-role="children"></div>
+        </section>
+        <section class="content_section">
+
+          <div class="content_item" data-role="parents"></div>
+          <div class="content_item" data-role="current"><article class="docsection">
+
+  <header class="docsection-headers">
+    <div data-section='meta'></div>
+    <div data-section='description'></div>
+  </header>
+
+  <section data-section="meta" class="docsection_section"><div data-role='anchor' id="Preparing-source-files"></div><h3 class="section-title" data-level="5.13.2">
+      Preparing source files
+    </h3>
+  </section>
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>{Placeholder}</p>
+</div>
+
+    </div></section>
+</article></div>
+          <div class="content_item" data-role="children"></div>
+        </section>
+        <section class="content_section">
+
+          <div class="content_item" data-role="parents"></div>
+          <div class="content_item" data-role="current"><article class="docsection">
+
+  <header class="docsection-headers">
+    <div data-section='meta'></div>
+    <div data-section='description'></div>
+  </header>
+
+  <section data-section="meta" class="docsection_section"><div data-role='anchor' id="Preparing-version-descriptions-for-the-support-site"></div><h3 class="section-title" data-level="5.13.3">
+      Preparing version descriptions for the support site
+    </h3>
+  </section>
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>{Placeholder}</p>
+</div>
+
+    </div></section>
+</article></div>
+          <div class="content_item" data-role="children"></div>
+        </section>
+        <section class="content_section">
+
+          <div class="content_item" data-role="parents"></div>
+          <div class="content_item" data-role="current"><article class="docsection">
+
+  <header class="docsection-headers">
+    <div data-section='meta'></div>
+    <div data-section='description'></div>
+  </header>
+
+  <section data-section="meta" class="docsection_section"><div data-role='anchor' id="Preparing-the-as-built-CSCI-design-and-other-software-support-information"></div><h3 class="section-title" data-level="5.13.4">
+      Preparing the "as built" CSCI design and other software support information
+    </h3>
+  </section>
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>{Placeholder}</p>
+</div>
+
+    </div></section>
+</article></div>
+          <div class="content_item" data-role="children"></div>
+        </section>
+        <section class="content_section">
+
+          <div class="content_item" data-role="parents"></div>
+          <div class="content_item" data-role="current"><article class="docsection">
+
+  <header class="docsection-headers">
+    <div data-section='meta'></div>
+    <div data-section='description'></div>
+  </header>
+
+  <section data-section="meta" class="docsection_section"><div data-role='anchor' id="Updating-the-system-design-description"></div><h3 class="section-title" data-level="5.13.5">
+      Updating the system design description
+    </h3>
+  </section>
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>{Placeholder}</p>
+</div>
+
+    </div></section>
+</article></div>
+          <div class="content_item" data-role="children"></div>
+        </section>
+        <section class="content_section">
+
+          <div class="content_item" data-role="parents"></div>
+          <div class="content_item" data-role="current"><article class="docsection">
+
+  <header class="docsection-headers">
+    <div data-section='meta'></div>
+    <div data-section='description'></div>
+  </header>
+
+  <section data-section="meta" class="docsection_section"><div data-role='anchor' id="Preparing-support-manuals"></div><h3 class="section-title" data-level="5.13.6">
+      Preparing support manuals
+    </h3>
+  </section>
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>{Placeholder}</p>
+</div>
+
+    </div></section>
+</article></div>
+          <div class="content_item" data-role="children"></div>
+        </section>
+        <section class="content_section">
+
+          <div class="content_item" data-role="parents"></div>
+          <div class="content_item" data-role="current"><article class="docsection">
+
+  <header class="docsection-headers">
+    <div data-section='meta'></div>
+    <div data-section='description'></div>
+  </header>
+
+  <section data-section="meta" class="docsection_section"><div data-role='anchor' id="Transition-to-the-designated-support-site"></div><h3 class="section-title" data-level="5.13.7">
+      Transition to the designated support site
+    </h3>
+  </section>
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>{Placeholder}</p>
+</div>
+
+    </div></section>
+</article></div>
+          <div class="content_item" data-role="children"></div>
+        </section>
+        <section class="content_section">
+
+          <div class="content_item" data-role="parents"></div>
+          <div class="content_item" data-role="current"><article class="docsection">
+
+  <header class="docsection-headers">
+    <div data-section='meta'></div>
+    <div data-section='description'></div>
+  </header>
+
+  <section data-section="meta" class="docsection_section"><div data-role='anchor' id="Software-configuration-management-"></div><h2 class="section-title" data-level="5.14">
+      Software configuration management.
+    </h2>
+  </section>
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>This paragraph shall be divided into the following subparagraphs to describe the approach to be followed for software configuration management. The planning in each subparagraph shall cover all contractual clauses regarding the identified topic.</p>
+</div>
+
+    </div></section>
+</article></div>
+          <div class="content_item" data-role="children"></div>
+        </section>
+        <section class="content_section">
+
+          <div class="content_item" data-role="parents"></div>
+          <div class="content_item" data-role="current"><article class="docsection">
+
+  <header class="docsection-headers">
+    <div data-section='meta'></div>
+    <div data-section='description'></div>
+  </header>
+
+  <section data-section="meta" class="docsection_section"><div data-role='anchor' id="Configuration-identification"></div><h3 class="section-title" data-level="5.14.1">
+      Configuration identification
+    </h3>
+  </section>
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>{Placeholder}</p>
+</div>
+
+    </div></section>
+</article></div>
+          <div class="content_item" data-role="children"></div>
+        </section>
+        <section class="content_section">
+
+          <div class="content_item" data-role="parents"></div>
+          <div class="content_item" data-role="current"><article class="docsection">
+
+  <header class="docsection-headers">
+    <div data-section='meta'></div>
+    <div data-section='description'></div>
+  </header>
+
+  <section data-section="meta" class="docsection_section"><div data-role='anchor' id="Configuration-control"></div><h3 class="section-title" data-level="5.14.2">
+      Configuration control
+    </h3>
+  </section>
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>{Placeholder}</p>
+</div>
+
+    </div></section>
+</article></div>
+          <div class="content_item" data-role="children"></div>
+        </section>
+        <section class="content_section">
+
+          <div class="content_item" data-role="parents"></div>
+          <div class="content_item" data-role="current"><article class="docsection">
+
+  <header class="docsection-headers">
+    <div data-section='meta'></div>
+    <div data-section='description'></div>
+  </header>
+
+  <section data-section="meta" class="docsection_section"><div data-role='anchor' id="Configuration-status-accounting"></div><h3 class="section-title" data-level="5.14.3">
+      Configuration status accounting
+    </h3>
+  </section>
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>{Placeholder}</p>
+</div>
+
+    </div></section>
+</article></div>
+          <div class="content_item" data-role="children"></div>
+        </section>
+        <section class="content_section">
+
+          <div class="content_item" data-role="parents"></div>
+          <div class="content_item" data-role="current"><article class="docsection">
+
+  <header class="docsection-headers">
+    <div data-section='meta'></div>
+    <div data-section='description'></div>
+  </header>
+
+  <section data-section="meta" class="docsection_section"><div data-role='anchor' id="Configuration-audits"></div><h3 class="section-title" data-level="5.14.4">
+      Configuration audits
+    </h3>
+  </section>
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>{Placeholder}</p>
+</div>
+
+    </div></section>
+</article></div>
+          <div class="content_item" data-role="children"></div>
+        </section>
+        <section class="content_section">
+
+          <div class="content_item" data-role="parents"></div>
+          <div class="content_item" data-role="current"><article class="docsection">
+
+  <header class="docsection-headers">
+    <div data-section='meta'></div>
+    <div data-section='description'></div>
+  </header>
+
+  <section data-section="meta" class="docsection_section"><div data-role='anchor' id="Packaging-storage-handling-and-delivery"></div><h3 class="section-title" data-level="5.14.5">
+      Packaging, storage, handling, and delivery
+    </h3>
+  </section>
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>{Placeholder}</p>
+</div>
+
+    </div></section>
+</article></div>
+          <div class="content_item" data-role="children"></div>
+        </section>
+        <section class="content_section">
+
+          <div class="content_item" data-role="parents"></div>
+          <div class="content_item" data-role="current"><article class="docsection">
+
+  <header class="docsection-headers">
+    <div data-section='meta'></div>
+    <div data-section='description'></div>
+  </header>
+
+  <section data-section="meta" class="docsection_section"><div data-role='anchor' id="Software-product-evaluation-"></div><h2 class="section-title" data-level="5.15">
+      Software product evaluation.
+    </h2>
+  </section>
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>This paragraph shall be divided into the following subparagraphs to describe the approach to be followed for software product evaluation. The planning in each subparagraph shall cover all contractual clauses regarding the identified topic.</p>
+</div>
+
+    </div></section>
+</article></div>
+          <div class="content_item" data-role="children"></div>
+        </section>
+        <section class="content_section">
+
+          <div class="content_item" data-role="parents"></div>
+          <div class="content_item" data-role="current"><article class="docsection">
+
+  <header class="docsection-headers">
+    <div data-section='meta'></div>
+    <div data-section='description'></div>
+  </header>
+
+  <section data-section="meta" class="docsection_section"><div data-role='anchor' id="In-process-and-final-software-product-evaluations"></div><h3 class="section-title" data-level="5.15.1">
+      In-process and final software product evaluations
+    </h3>
+  </section>
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>{Placeholder}</p>
+</div>
+
+    </div></section>
+</article></div>
+          <div class="content_item" data-role="children"></div>
+        </section>
+        <section class="content_section">
+
+          <div class="content_item" data-role="parents"></div>
+          <div class="content_item" data-role="current"><article class="docsection">
+
+  <header class="docsection-headers">
+    <div data-section='meta'></div>
+    <div data-section='description'></div>
+  </header>
+
+  <section data-section="meta" class="docsection_section"><div data-role='anchor' id="Software-product-evaluation-records-including-items-to-be-recorded"></div><h3 class="section-title" data-level="5.15.2">
+      Software product evaluation records, including items to be recorded
+    </h3>
+  </section>
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>{Placeholder}</p>
+</div>
+
+    </div></section>
+</article></div>
+          <div class="content_item" data-role="children"></div>
+        </section>
+        <section class="content_section">
+
+          <div class="content_item" data-role="parents"></div>
+          <div class="content_item" data-role="current"><article class="docsection">
+
+  <header class="docsection-headers">
+    <div data-section='meta'></div>
+    <div data-section='description'></div>
+  </header>
+
+  <section data-section="meta" class="docsection_section"><div data-role='anchor' id="Independence-in-software-product-evaluation"></div><h3 class="section-title" data-level="5.15.3">
+      Independence in software product evaluation
+    </h3>
+  </section>
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>{Placeholder}</p>
+</div>
+
+    </div></section>
+</article></div>
+          <div class="content_item" data-role="children"></div>
+        </section>
+        <section class="content_section">
+
+          <div class="content_item" data-role="parents"></div>
+          <div class="content_item" data-role="current"><article class="docsection">
+
+  <header class="docsection-headers">
+    <div data-section='meta'></div>
+    <div data-section='description'></div>
+  </header>
+
+  <section data-section="meta" class="docsection_section"><div data-role='anchor' id="Software-quality-assurance-"></div><h2 class="section-title" data-level="5.16">
+      Software quality assurance.
+    </h2>
+  </section>
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>This paragraph shall be divided into the following subparagraphs to describe the approach to be followed for software quality assurance. The planning in each subparagraph shall cover all contractual clauses regarding the identified topic.</p>
+</div>
+
+    </div></section>
+</article></div>
+          <div class="content_item" data-role="children"></div>
+        </section>
+        <section class="content_section">
+
+          <div class="content_item" data-role="parents"></div>
+          <div class="content_item" data-role="current"><article class="docsection">
+
+  <header class="docsection-headers">
+    <div data-section='meta'></div>
+    <div data-section='description'></div>
+  </header>
+
+  <section data-section="meta" class="docsection_section"><div data-role='anchor' id="Software-quality-assurance-evaluations"></div><h3 class="section-title" data-level="5.16.1">
+      Software quality assurance evaluations
+    </h3>
+  </section>
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>{Placeholder}</p>
+</div>
+
+    </div></section>
+</article></div>
+          <div class="content_item" data-role="children"></div>
+        </section>
+        <section class="content_section">
+
+          <div class="content_item" data-role="parents"></div>
+          <div class="content_item" data-role="current"><article class="docsection">
+
+  <header class="docsection-headers">
+    <div data-section='meta'></div>
+    <div data-section='description'></div>
+  </header>
+
+  <section data-section="meta" class="docsection_section"><div data-role='anchor' id="Software-quality-assurance-records-including-items-to-be-recorded"></div><h3 class="section-title" data-level="5.16.2">
+      Software quality assurance records, including items to be recorded
+    </h3>
+  </section>
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>{Placeholder}</p>
+</div>
+
+    </div></section>
+</article></div>
+          <div class="content_item" data-role="children"></div>
+        </section>
+        <section class="content_section">
+
+          <div class="content_item" data-role="parents"></div>
+          <div class="content_item" data-role="current"><article class="docsection">
+
+  <header class="docsection-headers">
+    <div data-section='meta'></div>
+    <div data-section='description'></div>
+  </header>
+
+  <section data-section="meta" class="docsection_section"><div data-role='anchor' id="Independence-in-software-quality-assurance"></div><h3 class="section-title" data-level="5.16.3">
+      Independence in software quality assurance
+    </h3>
+  </section>
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>{Placeholder}</p>
+</div>
+
+    </div></section>
+</article></div>
+          <div class="content_item" data-role="children"></div>
+        </section>
+        <section class="content_section">
+
+          <div class="content_item" data-role="parents"></div>
+          <div class="content_item" data-role="current"><article class="docsection">
+
+  <header class="docsection-headers">
+    <div data-section='meta'></div>
+    <div data-section='description'></div>
+  </header>
+
+  <section data-section="meta" class="docsection_section"><div data-role='anchor' id="Corrective-action-"></div><h2 class="section-title" data-level="5.17">
+      Corrective action.
+    </h2>
+  </section>
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>This paragraph shall be divided into the following subparagraphs to describe the approach to be followed for corrective action. The planning in each subparagraph shall cover all contractual clauses regarding the identified topic.</p>
+</div>
+
+    </div></section>
+</article></div>
+          <div class="content_item" data-role="children"></div>
+        </section>
+        <section class="content_section">
+
+          <div class="content_item" data-role="parents"></div>
+          <div class="content_item" data-role="current"><article class="docsection">
+
+  <header class="docsection-headers">
+    <div data-section='meta'></div>
+    <div data-section='description'></div>
+  </header>
+
+  <section data-section="meta" class="docsection_section"><div data-role='anchor' id="Problem-change-reports-including-items-to-be-recorded-candidate-items-include-project-name-originator-problem-number-problem-name-software-element-or-document-affected-origination-date-category-and-priority-description-analyst-assigned-to-the-problem-date-assigned-date-completed-analysis-time-recommended-solution-impacts-problem-status-approval-of-solution-follow-up-actions-corrector-correction-date-version-where-corrected-correction-time-description-of-solution-implemented-"></div><h3 class="section-title" data-level="5.17.1">
+      Problem/change reports, including items to be recorded (candidate items include project name, originator, problem number, problem name, software element or document affected, origination date, category and priority, description, analyst assigned to the problem, date assigned, date completed, analysis time, recommended solution, impacts, problem status, approval of solution, follow-up actions, corrector, correction date, version where corrected, correction time, description of solution implemented)
+    </h3>
+  </section>
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>{Placeholder}</p>
+</div>
+
+    </div></section>
+</article></div>
+          <div class="content_item" data-role="children"></div>
+        </section>
+        <section class="content_section">
+
+          <div class="content_item" data-role="parents"></div>
+          <div class="content_item" data-role="current"><article class="docsection">
+
+  <header class="docsection-headers">
+    <div data-section='meta'></div>
+    <div data-section='description'></div>
+  </header>
+
+  <section data-section="meta" class="docsection_section"><div data-role='anchor' id="Corrective-action-system"></div><h3 class="section-title" data-level="5.17.2">
+      Corrective action system
+    </h3>
+  </section>
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>{Placeholder}</p>
+</div>
+
+    </div></section>
+</article></div>
+          <div class="content_item" data-role="children"></div>
+        </section>
+        <section class="content_section">
+
+          <div class="content_item" data-role="parents"></div>
+          <div class="content_item" data-role="current"><article class="docsection">
+
+  <header class="docsection-headers">
+    <div data-section='meta'></div>
+    <div data-section='description'></div>
+  </header>
+
+  <section data-section="meta" class="docsection_section"><div data-role='anchor' id="Joint-technical-and-management-reviews-"></div><h2 class="section-title" data-level="5.18">
+      Joint technical and management reviews.
+    </h2>
+  </section>
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>This paragraph shall be divided into the following subparagraphs to describe the approach to be followed for joint technical and management reviews. The planning in each subparagraph shall cover all contractual clauses regarding the identified topic.</p>
+</div>
+
+    </div></section>
+</article></div>
+          <div class="content_item" data-role="children"></div>
+        </section>
+        <section class="content_section">
+
+          <div class="content_item" data-role="parents"></div>
+          <div class="content_item" data-role="current"><article class="docsection">
+
+  <header class="docsection-headers">
+    <div data-section='meta'></div>
+    <div data-section='description'></div>
+  </header>
+
+  <section data-section="meta" class="docsection_section"><div data-role='anchor' id="Joint-technical-reviews-including-a-proposed-set-of-reviews"></div><h3 class="section-title" data-level="5.18.1">
+      Joint technical reviews, including a proposed set of reviews
+    </h3>
+  </section>
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>{Placeholder}</p>
+</div>
+
+    </div></section>
+</article></div>
+          <div class="content_item" data-role="children"></div>
+        </section>
+        <section class="content_section">
+
+          <div class="content_item" data-role="parents"></div>
+          <div class="content_item" data-role="current"><article class="docsection">
+
+  <header class="docsection-headers">
+    <div data-section='meta'></div>
+    <div data-section='description'></div>
+  </header>
+
+  <section data-section="meta" class="docsection_section"><div data-role='anchor' id="Joint-management-reviews-including-a-proposed-set-of-reviews"></div><h3 class="section-title" data-level="5.18.2">
+      Joint management reviews, including a proposed set of reviews
+    </h3>
+  </section>
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>{Placeholder}</p>
+</div>
+
+    </div></section>
+</article></div>
+          <div class="content_item" data-role="children"></div>
+        </section>
+        <section class="content_section">
+
+          <div class="content_item" data-role="parents"></div>
+          <div class="content_item" data-role="current"><article class="docsection">
+
+  <header class="docsection-headers">
+    <div data-section='meta'></div>
+    <div data-section='description'></div>
+  </header>
+
+  <section data-section="meta" class="docsection_section"><div data-role='anchor' id="Other-software-development-activities-"></div><h2 class="section-title" data-level="5.19">
+      Other software development activities.
+    </h2>
+  </section>
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>This paragraph shall be divided into the following subparagraphs to describe the approach to be followed for other software development activities. The planning in each subparagraph shall cover all contractual clauses regarding the identified topic.</p>
+</div>
+
+    </div></section>
+</article></div>
+          <div class="content_item" data-role="children"></div>
+        </section>
+        <section class="content_section">
+
+          <div class="content_item" data-role="parents"></div>
+          <div class="content_item" data-role="current"><article class="docsection">
+
+  <header class="docsection-headers">
+    <div data-section='meta'></div>
+    <div data-section='description'></div>
+  </header>
+
+  <section data-section="meta" class="docsection_section"><div data-role='anchor' id="Risk-management-including-known-risks-and-corresponding-strategies"></div><h3 class="section-title" data-level="5.19.1">
+      Risk management, including known risks and corresponding strategies
+    </h3>
+  </section>
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>{Placeholder}</p>
+</div>
+
+    </div></section>
+</article></div>
+          <div class="content_item" data-role="children"></div>
+        </section>
+        <section class="content_section">
+
+          <div class="content_item" data-role="parents"></div>
+          <div class="content_item" data-role="current"><article class="docsection">
+
+  <header class="docsection-headers">
+    <div data-section='meta'></div>
+    <div data-section='description'></div>
+  </header>
+
+  <section data-section="meta" class="docsection_section"><div data-role='anchor' id="Software-management-indicators-including-indicators-to-be-used"></div><h3 class="section-title" data-level="5.19.2">
+      Software management indicators, including indicators to be used
+    </h3>
+  </section>
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>{Placeholder}</p>
+</div>
+
+    </div></section>
+</article></div>
+          <div class="content_item" data-role="children"></div>
+        </section>
+        <section class="content_section">
+
+          <div class="content_item" data-role="parents"></div>
+          <div class="content_item" data-role="current"><article class="docsection">
+
+  <header class="docsection-headers">
+    <div data-section='meta'></div>
+    <div data-section='description'></div>
+  </header>
+
+  <section data-section="meta" class="docsection_section"><div data-role='anchor' id="Security-and-privacy"></div><h3 class="section-title" data-level="5.19.3">
+      Security and privacy
+    </h3>
+  </section>
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>{Placeholder}</p>
+</div>
+
+    </div></section>
+</article></div>
+          <div class="content_item" data-role="children"></div>
+        </section>
+        <section class="content_section">
+
+          <div class="content_item" data-role="parents"></div>
+          <div class="content_item" data-role="current"><article class="docsection">
+
+  <header class="docsection-headers">
+    <div data-section='meta'></div>
+    <div data-section='description'></div>
+  </header>
+
+  <section data-section="meta" class="docsection_section"><div data-role='anchor' id="Subcontractor-management"></div><h3 class="section-title" data-level="5.19.4">
+      Subcontractor management
+    </h3>
+  </section>
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>{Placeholder}</p>
+</div>
+
+    </div></section>
+</article></div>
+          <div class="content_item" data-role="children"></div>
+        </section>
+        <section class="content_section">
+
+          <div class="content_item" data-role="parents"></div>
+          <div class="content_item" data-role="current"><article class="docsection">
+
+  <header class="docsection-headers">
+    <div data-section='meta'></div>
+    <div data-section='description'></div>
+  </header>
+
+  <section data-section="meta" class="docsection_section"><div data-role='anchor' id="Interface-with-software-independent-verification-and-validation-IV-V-agents"></div><h3 class="section-title" data-level="5.19.5">
+      Interface with software independent verification and validation (IV&V) agents
+    </h3>
+  </section>
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>{Placeholder}</p>
+</div>
+
+    </div></section>
+</article></div>
+          <div class="content_item" data-role="children"></div>
+        </section>
+        <section class="content_section">
+
+          <div class="content_item" data-role="parents"></div>
+          <div class="content_item" data-role="current"><article class="docsection">
+
+  <header class="docsection-headers">
+    <div data-section='meta'></div>
+    <div data-section='description'></div>
+  </header>
+
+  <section data-section="meta" class="docsection_section"><div data-role='anchor' id="Coordination-with-associate-developers"></div><h3 class="section-title" data-level="5.19.6">
+      Coordination with associate developers
+    </h3>
+  </section>
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>{Placeholder}</p>
+</div>
+
+    </div></section>
+</article></div>
+          <div class="content_item" data-role="children"></div>
+        </section>
+        <section class="content_section">
+
+          <div class="content_item" data-role="parents"></div>
+          <div class="content_item" data-role="current"><article class="docsection">
+
+  <header class="docsection-headers">
+    <div data-section='meta'></div>
+    <div data-section='description'></div>
+  </header>
+
+  <section data-section="meta" class="docsection_section"><div data-role='anchor' id="Improvement-of-project-processes"></div><h3 class="section-title" data-level="5.19.7">
+      Improvement of project processes
+    </h3>
+  </section>
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>{Placeholder}</p>
+</div>
+
+    </div></section>
+</article></div>
+          <div class="content_item" data-role="children"></div>
+        </section>
+        <section class="content_section">
+
+          <div class="content_item" data-role="parents"></div>
+          <div class="content_item" data-role="current"><article class="docsection">
+
+  <header class="docsection-headers">
+    <div data-section='meta'></div>
+    <div data-section='description'></div>
+  </header>
+
+  <section data-section="meta" class="docsection_section"><div data-role='anchor' id="Other-activities-not-covered-elsewhere-in-the-plan"></div><h3 class="section-title" data-level="5.19.8">
+      Other activities not covered elsewhere in the plan
+    </h3>
+  </section>
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>{Placeholder}</p>
+</div>
+
+    </div></section>
+</article></div>
+          <div class="content_item" data-role="children"></div>
+        </section>
+        <section class="content_section">
+
+          <div class="content_item" data-role="parents"></div>
+          <div class="content_item" data-role="current"><article class="docsection">
+
+  <header class="docsection-headers">
+    <div data-section='meta'></div>
+    <div data-section='description'></div>
+  </header>
+
+  <section data-section="meta" class="docsection_section"><div data-role='anchor' id="Schedules-and-activity-network-"></div><h1 class="section-title" data-level="6">
+      Schedules and activity network.
+    </h1>
+  </section>
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>This section shall present:</p>
+<p>Schedule(s) identifying the activities in each build and showing initiation of each activity, availability of draft and final deliverables and other milestones, and completion of each activity An activity network, depicting sequential relationships and dependencies among activities and identifying those activities that impose the greatest time restrictions on the project.</p>
+</div>
+
+    </div></section>
+</article></div>
+          <div class="content_item" data-role="children"></div>
+        </section>
+        <section class="content_section">
+
+          <div class="content_item" data-role="parents"></div>
+          <div class="content_item" data-role="current"><article class="docsection">
+
+  <header class="docsection-headers">
+    <div data-section='meta'></div>
+    <div data-section='description'></div>
+  </header>
+
+  <section data-section="meta" class="docsection_section"><div data-role='anchor' id="Project-organization-and-resources-"></div><h1 class="section-title" data-level="7">
+      Project organization and resources.
+    </h1>
+  </section>
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>This section shall be divided into the following paragraphs to describe the project organization and resources to be applied in each build.</p>
+</div>
+
+    </div></section>
+</article></div>
+          <div class="content_item" data-role="children"></div>
+        </section>
+        <section class="content_section">
+
+          <div class="content_item" data-role="parents"></div>
+          <div class="content_item" data-role="current"><article class="docsection">
+
+  <header class="docsection-headers">
+    <div data-section='meta'></div>
+    <div data-section='description'></div>
+  </header>
+
+  <section data-section="meta" class="docsection_section"><div data-role='anchor' id="Project-organization-"></div><h2 class="section-title" data-level="7.1">
+      Project organization.
+    </h2>
+  </section>
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>This paragraph shall describe the organizational structure to be used on the project, including the organizations involved, their relationships to one another, and the authority and responsibility of each organization for carrying out required activities.</p>
+</div>
+
+    </div></section>
+</article></div>
+          <div class="content_item" data-role="children"></div>
+        </section>
+        <section class="content_section">
+
+          <div class="content_item" data-role="parents"></div>
+          <div class="content_item" data-role="current"><article class="docsection">
+
+  <header class="docsection-headers">
+    <div data-section='meta'></div>
+    <div data-section='description'></div>
+  </header>
+
+  <section data-section="meta" class="docsection_section"><div data-role='anchor' id="Project-resources-"></div><h2 class="section-title" data-level="7.2">
+      Project resources.
+    </h2>
+  </section>
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>This paragraph shall describe the resources to be applied to the project. It shall include, as applicable:</p>
+<p>Personnel resources, including:</p>
+<ol class="arabic simple">
+<li>The estimated staff-loading for the project (number of personnel over time)</li>
+<li>The breakdown of the staff-loading numbers by responsibility (for example, management, software engineering, software testing, software configuration manage-ment, software product evaluation, software quality assurance)</li>
+<li>A breakdown of the skill levels, geographic locations, and security clearances of personnel performing each responsibility</li>
+</ol>
+<p>Overview of developer facilities to be used, including geographic locations in which the work will be performed, facilities to be used, and secure areas and other features of the facilities as applicable to the contracted effort. Acquirer-furnished equipment, software, services, documentation, data, and facilities required for the contracted effort. A schedule detailing when these items will be needed shall also be included. Other required resources, including a plan for obtaining the resources, dates needed, and availability of each resource item.</p>
+</div>
+
+    </div></section>
+</article></div>
+          <div class="content_item" data-role="children"></div>
+        </section>
+        <section class="content_section">
+
+          <div class="content_item" data-role="parents"></div>
+          <div class="content_item" data-role="current"><article class="docsection">
+
+  <header class="docsection-headers">
+    <div data-section='meta'></div>
+    <div data-section='description'></div>
+  </header>
+
+  <section data-section="meta" class="docsection_section"><div data-role='anchor' id="Notes-"></div><h1 class="section-title" data-level="8">
+      Notes.
+    </h1>
+  </section>
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>This section shall contain any general information that aids in understanding this document (e.g., background information, glossary, rationale). This section shall include an alphabetical listing of all acronyms, abbreviations, and their meanings as used in this document and a list of any terms and definitions needed to understand this document.</p>
+</div>
+
+    </div></section>
+</article></div>
+          <div class="content_item" data-role="children"></div>
+        </section>
+        <section class="content_section">
+
+          <div class="content_item" data-role="parents"></div>
+          <div class="content_item" data-role="current"><article class="docsection">
+
+  <header class="docsection-headers">
+    <div data-section='meta'></div>
+    <div data-section='description'></div>
+  </header>
+
+  <section data-section="meta" class="docsection_section"><div data-role='anchor' id="Appendixes-"></div><h1 class="section-title" data-level="9">
+      Appendixes.
+    </h1>
+  </section>
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>Appendixes may be used to provide information published separately for convenience in document maintenance (e.g., charts, classified data). As applicable, each appendix shall be referenced in the main body of the document where the data would normally have been provided. Appendixes may be bound as separate documents for ease in handling. Appendixes shall be lettered alphabetically (A, B, etc.).</p>
+</div>
+
+    </div></section>
+</article></div>
+          <div class="content_item" data-role="children"></div>
+        </section>
+      </div>
+
+
+    </main>
+
+  </div>
+  
+</body>
+</html>

@@ -19,10 +19,1159 @@ This paragraph shall contain a full identification of the system and the softwar
 
 [SECTION]
 TITLE: System overview.
+
 [FREETEXT]
 This paragraph shall briefly state the purpose of the system and the software to which this document applies. It shall describe the general nature of the system and software; summarize the history of system development, operation, and maintenance; identify the project sponsor, acquirer, user, developer, and support agencies; identify current and planned operating sites; and list other relevant documents.
 [/FREETEXT]
 
 [/SECTION]
 
+[SECTION]
+TITLE: Document overview.
+
+[FREETEXT]
+This paragraph shall summarize the purpose and contents of this document and shall describe any security or privacy considerations associated with its use.
+[/FREETEXT]
+
 [/SECTION]
+
+[/SECTION]
+
+[SECTION]
+TITLE: Referenced documents.
+
+[FREETEXT]
+This section shall list the number, title, revision, and date of all documents referenced in this manual. This section shall also identify the source for all documents not available through normal Government stocking activities.
+[/FREETEXT]
+
+[/SECTION]
+
+[SECTION]
+TITLE: Overview of required work.
+
+[FREETEXT]
+This section shall be divided into paragraphs as needed to establish the context for the planning described in later sections. It shall include, as applicable, an overview of:
+
+1. Requirements and constraints on the system and software to be developed
+2. Requirements and constraints on project documentation
+3. Position of the project in the system life cycle
+4. The selected program/acquisition strategy or any requirements or constraints on it
+5. Requirements and constraints on project schedules and resources
+6. Other requirements and constraints, such as on project security, privacy, methods, standards, interdependencies in hardware and software development, etc.
+
+[/FREETEXT]
+
+[/SECTION]
+
+[SECTION]
+TITLE: Plans for performing general software development activities.
+
+[FREETEXT]
+This section shall be divided into the following paragraphs. Provisions corresponding to non-required activities may be satisfied by the words "Not applicable." If different builds or different software on the project require different planning, these differences shall be noted in the paragraphs. In addition to the content specified below, each paragraph shall identify applicable risks/uncertainties and plans for dealing with them.
+[/FREETEXT]
+
+[SECTION]
+TITLE: Software development process.
+
+[FREETEXT]
+This paragraph shall describe the software development process to be used. The planning shall cover all contractual clauses concerning this topic, identifying planned builds, if applicable, their objectives, and the software development activities to be performed in each build.
+[/FREETEXT]
+
+[/SECTION]
+
+[SECTION]
+TITLE: General plans for software development.
+
+[FREETEXT]
+This paragraph shall be divided into the following subparagraphs.
+[/FREETEXT]
+
+[SECTION]
+TITLE: Software development methods.
+
+[FREETEXT]
+This paragraph shall describe or reference the software development methods to be used. Included shall be descriptions of the manual and automated tools and procedures to be used in support of these methods. The methods shall cover all contractual clauses concerning this topic. Reference may be made to other paragraphs in this plan if the methods are better described in context with the activities to which they will be applied.
+[/FREETEXT]
+
+[/SECTION]
+
+[SECTION]
+TITLE: Standards for software products.
+
+[FREETEXT]
+This paragraph shall describe or reference the standards to be followed for representing requirements, design, code, test cases, test procedures, and test results. The standards shall cover all contractual clauses concerning this topic. Reference may be made to other paragraphs in this plan if the standards are better described in context with the activities to which they will be applied. Standards for code shall be provided for each programming language to be used. They shall include at a minimum:
+
+Standards for format (such as indentation, spacing, capitalization, and order of information) Standards for header comments (requiring, for example, name/identifier of the code; version identification; modification history; purpose; requirements and design decisions implemented; notes on the processing (such as algorithms used, assumptions, constraints, limitations, and side effects); and notes on the data (inputs, outputs, variables, data structures, etc.) Standards for other comments (such as required number and content expectations) Naming conventions for variables, parameters, packages, procedures, files, etc. Restrictions, if any, on the use of programming language constructs or features Restrictions, if any, on the complexity of code aggregates
+[/FREETEXT]
+
+[/SECTION]
+
+[SECTION]
+TITLE: Reusable software products.
+
+[FREETEXT]
+This paragraph shall be divided into the following subparagraphs.
+[/FREETEXT]
+
+[SECTION]
+TITLE: Incorporating reusable software products.
+
+[FREETEXT]
+This paragraph shall describe the approach to be followed for identifying, evaluating, and incorporating reusable software products, including the scope of the search for such products and the criteria to be used for their evaluation. It shall cover all contractual clauses concerning this topic. Candidate or selected reusable software products known at the time this plan is prepared or updated shall be identified and described, together with benefits, drawbacks, and restrictions, as applicable, associated with their use.
+[/FREETEXT]
+
+[/SECTION]
+
+[SECTION]
+TITLE: Developing reusable software products.
+
+[FREETEXT]
+This paragraph shall describe the approach to be followed for identifying, evaluating, and reporting opportunities for developing reusable software products. It shall cover all contractual clauses concerning this topic.
+[/FREETEXT]
+
+[/SECTION]
+
+[/SECTION]
+
+[SECTION]
+TITLE: Handling of critical requirements.
+
+[FREETEXT]
+This paragraph shall be divided into the following subparagraphs to describe the approach to be followed for handling requirements designated critical. The planning in each subparagraph shall cover all contractual clauses concerning the identified topic.
+[/FREETEXT]
+
+[SECTION]
+TITLE: Safety assurance
+
+[FREETEXT]
+{Placeholder}
+[/FREETEXT]
+
+[/SECTION]
+
+[SECTION]
+TITLE: Security assurance
+
+[FREETEXT]
+{Placeholder}
+[/FREETEXT]
+
+[/SECTION]
+
+[SECTION]
+TITLE: Privacy assurance
+
+[FREETEXT]
+{Placeholder}
+[/FREETEXT]
+
+[/SECTION]
+
+[SECTION]
+TITLE: Assurance of other critical requirements
+
+[FREETEXT]
+{Placeholder}
+[/FREETEXT]
+
+[/SECTION]
+
+[/SECTION]
+
+[SECTION]
+TITLE: Computer hardware resource utilization.
+
+[FREETEXT]
+This paragraph shall describe the approach to be followed for allocating computer hardware resources and monitoring their utilization. It shall cover all contractual clauses concerning this topic.
+[/FREETEXT]
+
+[/SECTION]
+
+[SECTION]
+TITLE: Recording rationale.
+
+[FREETEXT]
+This paragraph shall describe the approach to be followed for recording rationale that will be useful to the support agency for key decisions made on the project. It shall interpret the term "key decisions" for the project and state where the rationale are to be recorded. It shall cover all contractual clauses concerning this topic.
+[/FREETEXT]
+
+[/SECTION]
+
+[SECTION]
+TITLE: Access for acquirer review.
+
+[FREETEXT]
+This paragraph shall describe the approach to be followed for providing the acquirer or its authorized representative access to developer and subcontractor facilities for review of software products and activities. It shall cover all contractual clauses concerning this topic.
+[/FREETEXT]
+
+[/SECTION]
+
+[/SECTION]
+
+[/SECTION]
+
+[SECTION]
+TITLE: Plans for performing detailed software development activities.
+
+[FREETEXT]
+This section shall be divided into the following paragraphs. Provisions corresponding to non-required activities may be satisfied by the words "Not applicable." If different builds or different software on the project require different planning, these differences shall be noted in the paragraphs. The discussion of each activity shall include the approach (meth-ods/procedures/tools) to be applied to: 1) the analysis or other technical tasks involved, 2) the recording of results, and 3) the preparation of associated deliverables, if applicable. The discussion shall also identify applicable risks/uncertainties and plans for dealing with them. Reference may be made to 4.2.1 if applicable methods are described there.
+[/FREETEXT]
+
+[SECTION]
+TITLE: Project planning and oversight.
+
+[FREETEXT]
+This paragraph shall be divided into the following subparagraphs to describe the approach to be followed for project planning and oversight. The planning in each subparagraph shall cover all contractual clauses regarding the identified topic.
+[/FREETEXT]
+
+[SECTION]
+TITLE: Software development planning (covering updates to this plan)
+
+[FREETEXT]
+{Placeholder}
+[/FREETEXT]
+
+[/SECTION]
+
+[SECTION]
+TITLE: CSCI test planning
+
+[FREETEXT]
+{Placeholder}
+[/FREETEXT]
+
+[/SECTION]
+
+[SECTION]
+TITLE: System test planning
+
+[FREETEXT]
+{Placeholder}
+[/FREETEXT]
+
+[/SECTION]
+
+[SECTION]
+TITLE: Software installation planning
+
+[FREETEXT]
+{Placeholder}
+[/FREETEXT]
+
+[/SECTION]
+
+[SECTION]
+TITLE: Software transition planning
+
+[FREETEXT]
+{Placeholder}
+[/FREETEXT]
+
+[/SECTION]
+
+[SECTION]
+TITLE: Following and updating plans, including the intervals for management review
+
+[FREETEXT]
+{Placeholder}
+[/FREETEXT]
+
+[/SECTION]
+
+[/SECTION]
+
+[SECTION]
+TITLE: Establishing a software development environment.
+
+[FREETEXT]
+This paragraph shall be divided into the following subparagraphs to describe the approach to be followed for establishing, controlling, and maintaining a software development environment. The planning in each subparagraph shall cover all contractual clauses regarding the identified topic.
+[/FREETEXT]
+
+[SECTION]
+TITLE: Software engineering environment
+
+[FREETEXT]
+{Placeholder}
+[/FREETEXT]
+
+[/SECTION]
+
+[SECTION]
+TITLE: Software test environment
+
+[FREETEXT]
+{Placeholder}
+[/FREETEXT]
+
+[/SECTION]
+
+[SECTION]
+TITLE: Software development library
+
+[FREETEXT]
+{Placeholder}
+[/FREETEXT]
+
+[/SECTION]
+
+[SECTION]
+TITLE: Software development files
+
+[FREETEXT]
+{Placeholder}
+[/FREETEXT]
+
+[/SECTION]
+
+[SECTION]
+TITLE: Non-deliverable software
+
+[FREETEXT]
+{Placeholder}
+[/FREETEXT]
+
+[/SECTION]
+
+[/SECTION]
+
+[SECTION]
+TITLE: System requirements analysis.
+
+[FREETEXT]
+This paragraph shall be divided into the following subparagraphs to describe the approach to be followed for participating in system requirements analysis. The planning in each subparagraph shall cover all contractual clauses regarding the identified topic.
+[/FREETEXT]
+
+[SECTION]
+TITLE: Analysis of user input
+
+[FREETEXT]
+{Placeholder}
+[/FREETEXT]
+
+[/SECTION]
+
+[SECTION]
+TITLE: Operational concept
+
+[FREETEXT]
+{Placeholder}
+[/FREETEXT]
+
+[/SECTION]
+
+[SECTION]
+TITLE: System requirements
+
+[FREETEXT]
+{Placeholder}
+[/FREETEXT]
+
+[/SECTION]
+
+[/SECTION]
+
+[SECTION]
+TITLE: System design.
+
+[FREETEXT]
+This paragraph shall be divided into the following subparagraphs to describe the approach to be followed for participating in system design. The planning in each subparagraph shall cover all contractual clauses regarding the identified topic.
+[/FREETEXT]
+
+[SECTION]
+TITLE: System-wide design decisions
+
+[FREETEXT]
+{Placeholder}
+[/FREETEXT]
+
+[/SECTION]
+
+[SECTION]
+TITLE: System architectural design
+
+[FREETEXT]
+{Placeholder}
+[/FREETEXT]
+
+[/SECTION]
+
+[/SECTION]
+
+[SECTION]
+TITLE: Software requirements analysis.
+
+[FREETEXT]
+This paragraph shall describe the approach to be followed for software requirements analysis. The approach shall cover all contractual clauses concerning this topic.
+[/FREETEXT]
+
+[/SECTION]
+
+[SECTION]
+TITLE: Software design.
+
+[FREETEXT]
+This paragraph shall be divided into the following subparagraphs to describe the approach to be followed for software design. The planning in each subparagraph shall cover all contractual clauses regarding the identified topic.
+[/FREETEXT]
+
+[SECTION]
+TITLE: CSCI-wide design decisions
+
+[FREETEXT]
+{Placeholder}
+[/FREETEXT]
+
+[/SECTION]
+
+[SECTION]
+TITLE: CSCI architectural design
+
+[FREETEXT]
+{Placeholder}
+[/FREETEXT]
+
+[/SECTION]
+
+[SECTION]
+TITLE: CSCI detailed design
+
+[FREETEXT]
+{Placeholder}
+[/FREETEXT]
+
+[/SECTION]
+
+[/SECTION]
+
+[SECTION]
+TITLE: Software implementation and unit testing.
+
+[FREETEXT]
+This paragraph shall be divided into the following subparagraphs to describe the approach to be followed for software implementation and unit testing. The planning in each subparagraph shall cover all contractual clauses regarding the identified topic.
+[/FREETEXT]
+
+[SECTION]
+TITLE: Software implementation
+
+[FREETEXT]
+{Placeholder}
+[/FREETEXT]
+
+[/SECTION]
+
+[SECTION]
+TITLE: Preparing for unit testing
+
+[FREETEXT]
+{Placeholder}
+[/FREETEXT]
+
+[/SECTION]
+
+[SECTION]
+TITLE: Performing unit testing
+
+[FREETEXT]
+{Placeholder}
+[/FREETEXT]
+
+[/SECTION]
+
+[SECTION]
+TITLE: Revision and retesting
+
+[FREETEXT]
+{Placeholder}
+[/FREETEXT]
+
+[/SECTION]
+
+[SECTION]
+TITLE: Analyzing and recording unit test results
+
+[FREETEXT]
+{Placeholder}
+[/FREETEXT]
+
+[/SECTION]
+
+[/SECTION]
+
+[SECTION]
+TITLE: Unit integration and testing.
+
+[FREETEXT]
+This paragraph shall be divided into the following subparagraphs to describe the approach to be followed for unit integration and testing. The planning in each subparagraph shall cover all contractual clauses regarding the identified topic.
+[/FREETEXT]
+
+[SECTION]
+TITLE: Preparing for unit integration and testing
+
+[FREETEXT]
+{Placeholder}
+[/FREETEXT]
+
+[/SECTION]
+
+[SECTION]
+TITLE: Performing unit integration and testing
+
+[FREETEXT]
+{Placeholder}
+[/FREETEXT]
+
+[/SECTION]
+
+[SECTION]
+TITLE: Revision and retesting
+
+[FREETEXT]
+{Placeholder}
+[/FREETEXT]
+
+[/SECTION]
+
+[SECTION]
+TITLE: Analyzing and recording unit integration and test results
+
+[FREETEXT]
+{Placeholder}
+[/FREETEXT]
+
+[/SECTION]
+
+[/SECTION]
+
+[SECTION]
+TITLE: CSCI qualification testing.
+
+[FREETEXT]
+This paragraph shall be divided into the following subparagraphs to describe the approach to be followed for CSCI qualification testing. The planning in each subparagraph shall cover all contractual clauses regarding the identified topic.
+[/FREETEXT]
+
+[SECTION]
+TITLE: Independence in CSCI qualification testing
+
+[FREETEXT]
+{Placeholder}
+[/FREETEXT]
+
+[/SECTION]
+
+[SECTION]
+TITLE: Testing on the target computer system
+
+[FREETEXT]
+{Placeholder}
+[/FREETEXT]
+
+[/SECTION]
+
+[SECTION]
+TITLE: Preparing for CSCI qualification testing
+
+[FREETEXT]
+{Placeholder}
+[/FREETEXT]
+
+[/SECTION]
+
+[SECTION]
+TITLE: Dry run of CSCI qualification testing
+
+[FREETEXT]
+{Placeholder}
+[/FREETEXT]
+
+[/SECTION]
+
+[SECTION]
+TITLE: Performing CSCI qualification testing
+
+[FREETEXT]
+{Placeholder}
+[/FREETEXT]
+
+[/SECTION]
+
+[SECTION]
+TITLE: Revision and retesting
+
+[FREETEXT]
+{Placeholder}
+[/FREETEXT]
+
+[/SECTION]
+
+[SECTION]
+TITLE: Analyzing and recording CSCI qualification test results
+
+[FREETEXT]
+{Placeholder}
+[/FREETEXT]
+
+[/SECTION]
+
+[/SECTION]
+
+[SECTION]
+TITLE: CSCI/HWCI integration and testing.
+
+[FREETEXT]
+This paragraph shall be divided into the following subparagraphs to describe the approach to be followed for participating in CSCI/HWCI integration and testing. The planning in each subparagraph shall cover all contractual clauses regarding the identified topic.
+[/FREETEXT]
+
+[SECTION]
+TITLE: Preparing for CSCI/HWCI integration and testing
+
+[FREETEXT]
+{Placeholder}
+[/FREETEXT]
+
+[/SECTION]
+
+[SECTION]
+TITLE: Performing CSCI/HWCI integration and testing
+
+[FREETEXT]
+{Placeholder}
+[/FREETEXT]
+
+[/SECTION]
+
+[SECTION]
+TITLE: Revision and retesting
+
+[FREETEXT]
+{Placeholder}
+[/FREETEXT]
+
+[/SECTION]
+
+[SECTION]
+TITLE: Analyzing and recording CSCI/HWCI integration and test results
+
+[FREETEXT]
+{Placeholder}
+[/FREETEXT]
+
+[/SECTION]
+
+[/SECTION]
+
+[SECTION]
+TITLE: System qualification testing.
+
+[FREETEXT]
+This paragraph shall be divided into the following subparagraphs to describe the approach to be followed for participating in system qualification testing. The planning in each subparagraph shall cover all contractual clauses regarding the identified topic.
+[/FREETEXT]
+
+[SECTION]
+TITLE: Independence in system qualification testing
+
+[FREETEXT]
+{Placeholder}
+[/FREETEXT]
+
+[/SECTION]
+
+[SECTION]
+TITLE: Testing on the target computer system
+
+[FREETEXT]
+{Placeholder}
+[/FREETEXT]
+
+[/SECTION]
+
+[SECTION]
+TITLE: Preparing for system qualification testing
+
+[FREETEXT]
+{Placeholder}
+[/FREETEXT]
+
+[/SECTION]
+
+[SECTION]
+TITLE: Dry run of system qualification testing
+
+[FREETEXT]
+{Placeholder}
+[/FREETEXT]
+
+[/SECTION]
+
+[SECTION]
+TITLE: Performing system qualification testing
+
+[FREETEXT]
+{Placeholder}
+[/FREETEXT]
+
+[/SECTION]
+
+[SECTION]
+TITLE: Revision and retesting
+
+[FREETEXT]
+{Placeholder}
+[/FREETEXT]
+
+[/SECTION]
+
+[SECTION]
+TITLE: Analyzing and recording system qualification test results
+
+[FREETEXT]
+{Placeholder}
+[/FREETEXT]
+
+[/SECTION]
+
+[/SECTION]
+
+[SECTION]
+TITLE: Preparing for software use.
+
+[FREETEXT]
+This paragraph shall be divided into the following subparagraphs to describe the approach to be followed for preparing for software use. The planning in each subparagraph shall cover all contractual clauses regarding the identified topic.
+[/FREETEXT]
+
+[SECTION]
+TITLE: Preparing the executable software
+
+[FREETEXT]
+{Placeholder}
+[/FREETEXT]
+
+[/SECTION]
+
+[SECTION]
+TITLE: Preparing version descriptions for user sites
+
+[FREETEXT]
+{Placeholder}
+[/FREETEXT]
+
+[/SECTION]
+
+[SECTION]
+TITLE: Preparing user manuals
+
+[FREETEXT]
+{Placeholder}
+[/FREETEXT]
+
+[/SECTION]
+
+[SECTION]
+TITLE: Installation at user sites
+
+[FREETEXT]
+{Placeholder}
+[/FREETEXT]
+
+[/SECTION]
+
+[/SECTION]
+
+[SECTION]
+TITLE: Preparing for software transition.
+
+[FREETEXT]
+This paragraph shall be divided into the following subparagraphs to describe the approach to be followed for preparing for software transition. The planning in each subparagraph shall cover all contractual clauses regarding the identified topic.
+[/FREETEXT]
+
+[SECTION]
+TITLE: Preparing the executable software
+
+[FREETEXT]
+{Placeholder}
+[/FREETEXT]
+
+[/SECTION]
+
+[SECTION]
+TITLE: Preparing source files
+
+[FREETEXT]
+{Placeholder}
+[/FREETEXT]
+
+[/SECTION]
+
+[SECTION]
+TITLE: Preparing version descriptions for the support site
+
+[FREETEXT]
+{Placeholder}
+[/FREETEXT]
+
+[/SECTION]
+
+[SECTION]
+TITLE: Preparing the "as built" CSCI design and other software support information
+
+[FREETEXT]
+{Placeholder}
+[/FREETEXT]
+
+[/SECTION]
+
+[SECTION]
+TITLE: Updating the system design description
+
+[FREETEXT]
+{Placeholder}
+[/FREETEXT]
+
+[/SECTION]
+
+[SECTION]
+TITLE: Preparing support manuals
+
+[FREETEXT]
+{Placeholder}
+[/FREETEXT]
+
+[/SECTION]
+
+[SECTION]
+TITLE: Transition to the designated support site
+
+[FREETEXT]
+{Placeholder}
+[/FREETEXT]
+
+[/SECTION]
+
+[/SECTION]
+
+[SECTION]
+TITLE: Software configuration management.
+
+[FREETEXT]
+This paragraph shall be divided into the following subparagraphs to describe the approach to be followed for software configuration management. The planning in each subparagraph shall cover all contractual clauses regarding the identified topic.
+[/FREETEXT]
+
+[SECTION]
+TITLE: Configuration identification
+
+[FREETEXT]
+{Placeholder}
+[/FREETEXT]
+
+[/SECTION]
+
+[SECTION]
+TITLE: Configuration control
+
+[FREETEXT]
+{Placeholder}
+[/FREETEXT]
+
+[/SECTION]
+
+[SECTION]
+TITLE: Configuration status accounting
+
+[FREETEXT]
+{Placeholder}
+[/FREETEXT]
+
+[/SECTION]
+
+[SECTION]
+TITLE: Configuration audits
+
+[FREETEXT]
+{Placeholder}
+[/FREETEXT]
+
+[/SECTION]
+
+[SECTION]
+TITLE: Packaging, storage, handling, and delivery
+
+[FREETEXT]
+{Placeholder}
+[/FREETEXT]
+
+[/SECTION]
+
+[/SECTION]
+
+[SECTION]
+TITLE: Software product evaluation.
+
+[FREETEXT]
+This paragraph shall be divided into the following subparagraphs to describe the approach to be followed for software product evaluation. The planning in each subparagraph shall cover all contractual clauses regarding the identified topic.
+[/FREETEXT]
+
+[SECTION]
+TITLE: In-process and final software product evaluations
+
+[FREETEXT]
+{Placeholder}
+[/FREETEXT]
+
+[/SECTION]
+
+[SECTION]
+TITLE: Software product evaluation records, including items to be recorded
+
+[FREETEXT]
+{Placeholder}
+[/FREETEXT]
+
+[/SECTION]
+
+[SECTION]
+TITLE: Independence in software product evaluation
+
+[FREETEXT]
+{Placeholder}
+[/FREETEXT]
+
+[/SECTION]
+
+[/SECTION]
+
+[SECTION]
+TITLE: Software quality assurance.
+
+[FREETEXT]
+This paragraph shall be divided into the following subparagraphs to describe the approach to be followed for software quality assurance. The planning in each subparagraph shall cover all contractual clauses regarding the identified topic.
+[/FREETEXT]
+
+[SECTION]
+TITLE: Software quality assurance evaluations
+
+[FREETEXT]
+{Placeholder}
+[/FREETEXT]
+
+[/SECTION]
+
+[SECTION]
+TITLE: Software quality assurance records, including items to be recorded
+
+[FREETEXT]
+{Placeholder}
+[/FREETEXT]
+
+[/SECTION]
+
+[SECTION]
+TITLE: Independence in software quality assurance
+
+[FREETEXT]
+{Placeholder}
+[/FREETEXT]
+
+[/SECTION]
+
+[/SECTION]
+
+[SECTION]
+TITLE: Corrective action.
+
+[FREETEXT]
+This paragraph shall be divided into the following subparagraphs to describe the approach to be followed for corrective action. The planning in each subparagraph shall cover all contractual clauses regarding the identified topic.
+[/FREETEXT]
+
+[SECTION]
+TITLE: Problem/change reports, including items to be recorded (candidate items include project name, originator, problem number, problem name, software element or document affected, origination date, category and priority, description, analyst assigned to the problem, date assigned, date completed, analysis time, recommended solution, impacts, problem status, approval of solution, follow-up actions, corrector, correction date, version where corrected, correction time, description of solution implemented)
+
+[FREETEXT]
+{Placeholder}
+[/FREETEXT]
+
+[/SECTION]
+
+[SECTION]
+TITLE: Corrective action system
+
+[FREETEXT]
+{Placeholder}
+[/FREETEXT]
+
+[/SECTION]
+
+[/SECTION]
+
+[SECTION]
+TITLE: Joint technical and management reviews.
+
+[FREETEXT]
+This paragraph shall be divided into the following subparagraphs to describe the approach to be followed for joint technical and management reviews. The planning in each subparagraph shall cover all contractual clauses regarding the identified topic.
+[/FREETEXT]
+
+[SECTION]
+TITLE: Joint technical reviews, including a proposed set of reviews
+
+[FREETEXT]
+{Placeholder}
+[/FREETEXT]
+
+[/SECTION]
+
+[SECTION]
+TITLE: Joint management reviews, including a proposed set of reviews
+
+[FREETEXT]
+{Placeholder}
+[/FREETEXT]
+
+[/SECTION]
+
+[/SECTION]
+
+[SECTION]
+TITLE: Other software development activities.
+
+[FREETEXT]
+This paragraph shall be divided into the following subparagraphs to describe the approach to be followed for other software development activities. The planning in each subparagraph shall cover all contractual clauses regarding the identified topic.
+[/FREETEXT]
+
+[SECTION]
+TITLE: Risk management, including known risks and corresponding strategies
+
+[FREETEXT]
+{Placeholder}
+[/FREETEXT]
+
+[/SECTION]
+
+[SECTION]
+TITLE: Software management indicators, including indicators to be used
+
+[FREETEXT]
+{Placeholder}
+[/FREETEXT]
+
+[/SECTION]
+
+[SECTION]
+TITLE: Security and privacy
+
+[FREETEXT]
+{Placeholder}
+[/FREETEXT]
+
+[/SECTION]
+
+[SECTION]
+TITLE: Subcontractor management
+
+[FREETEXT]
+{Placeholder}
+[/FREETEXT]
+
+[/SECTION]
+
+[SECTION]
+TITLE: Interface with software independent verification and validation (IV&V) agents
+
+[FREETEXT]
+{Placeholder}
+[/FREETEXT]
+
+[/SECTION]
+
+[SECTION]
+TITLE: Coordination with associate developers
+
+[FREETEXT]
+{Placeholder}
+[/FREETEXT]
+
+[/SECTION]
+
+[SECTION]
+TITLE: Improvement of project processes
+
+[FREETEXT]
+{Placeholder}
+[/FREETEXT]
+
+[/SECTION]
+
+[SECTION]
+TITLE: Other activities not covered elsewhere in the plan
+
+[FREETEXT]
+{Placeholder}
+[/FREETEXT]
+
+[/SECTION]
+
+[/SECTION]
+
+[/SECTION]
+
+[SECTION]
+TITLE: Schedules and activity network.
+
+[FREETEXT]
+This section shall present:
+
+Schedule(s) identifying the activities in each build and showing initiation of each activity, availability of draft and final deliverables and other milestones, and completion of each activity An activity network, depicting sequential relationships and dependencies among activities and identifying those activities that impose the greatest time restrictions on the project.
+[/FREETEXT]
+
+[/SECTION]
+
+[SECTION]
+TITLE: Project organization and resources.
+
+[FREETEXT]
+This section shall be divided into the following paragraphs to describe the project organization and resources to be applied in each build.
+[/FREETEXT]
+
+[SECTION]
+TITLE: Project organization.
+
+[FREETEXT]
+This paragraph shall describe the organizational structure to be used on the project, including the organizations involved, their relationships to one another, and the authority and responsibility of each organization for carrying out required activities.
+[/FREETEXT]
+
+[/SECTION]
+
+[SECTION]
+TITLE: Project resources.
+
+[FREETEXT]
+This paragraph shall describe the resources to be applied to the project. It shall include, as applicable:
+
+Personnel resources, including:
+
+1. The estimated staff-loading for the project (number of personnel over time)
+2. The breakdown of the staff-loading numbers by responsibility (for example, management, software engineering, software testing, software configuration manage-ment, software product evaluation, software quality assurance)
+3. A breakdown of the skill levels, geographic locations, and security clearances of personnel performing each responsibility
+
+Overview of developer facilities to be used, including geographic locations in which the work will be performed, facilities to be used, and secure areas and other features of the facilities as applicable to the contracted effort. Acquirer-furnished equipment, software, services, documentation, data, and facilities required for the contracted effort. A schedule detailing when these items will be needed shall also be included. Other required resources, including a plan for obtaining the resources, dates needed, and availability of each resource item.
+[/FREETEXT]
+
+[/SECTION]
+
+[/SECTION]
+
+[SECTION]
+TITLE: Notes.
+
+[FREETEXT]
+This section shall contain any general information that aids in understanding this document (e.g., background information, glossary, rationale). This section shall include an alphabetical listing of all acronyms, abbreviations, and their meanings as used in this document and a list of any terms and definitions needed to understand this document.
+[/FREETEXT]
+
+[/SECTION]
+
+[SECTION]
+TITLE: Appendixes.
+
+[FREETEXT]
+Appendixes may be used to provide information published separately for convenience in document maintenance (e.g., charts, classified data). As applicable, each appendix shall be referenced in the main body of the document where the data would normally have been provided. Appendixes may be bound as separate documents for ease in handling. Appendixes shall be lettered alphabetically (A, B, etc.).
+[/FREETEXT]
+
+[/SECTION]
+
+
+
